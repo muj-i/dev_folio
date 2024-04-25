@@ -1,7 +1,5 @@
-import 'package:dev_folio/presentation/utils/tech_stack_assets.dart';
 import 'package:dev_folio/presentation/models/tech_stack_model.dart';
-
-
+import 'package:dev_folio/presentation/utils/tech_stack_assets.dart';
 
 class TechSdkData {
   final List<TechStackModel> techSdkItems = [
