@@ -34,7 +34,7 @@ class TechStackAssets {
 
   static const swagger = '$_root3/374111/swagger.svg';
 
-  static const dJango = '$_root4/1714073463791django.svg';
+  static const dJango = '$_root4/1714074348358djangoproject-svgrepo-com.svg';
 
   static const agora = '$_root4/1714071340926agora.svg';
   static const androidStudio = '$_root4/1714071629605android-studio-icon.svg';
