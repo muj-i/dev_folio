@@ -31,7 +31,7 @@ class TechStack extends StatelessWidget {
           child: GridView.builder(
             shrinkWrap: true,
             physics: const NeverScrollableScrollPhysics(),
-            gridDelegate:  SliverGridDelegateWithFixedCrossAxisCount(
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: Get.width < 700 ? 3 : 8,
               crossAxisSpacing: 10,
               mainAxisSpacing: 10,
@@ -39,21 +39,39 @@ class TechStack extends StatelessWidget {
             itemCount: techSdkData.techSdkItems.length,
             itemBuilder: (context, index) {
               return SizedBox(
-                  height: 100,
-                  width: 100,
-                  child: Column(
-                    children: [
-                      SvgPicture.network(
-                        techSdkData.techSdkItems[index].svgImage,
-                        height: techSdkData.techSdkItems[index].height ?? 50,
-                      ),
-                      const SizedBox(height: 10),
-                      Text(techSdkData.techSdkItems[index].title),
-                    ],
-                  ));
+                height: 100,
+                width: 100,
+                child: Column(
+                  children: [
+                    SvgPicture.network(
+                      techSdkData.techSdkItems[index].svgImage,
+                      height: techSdkData.techSdkItems[index].height ?? 50,
+                    ),
+                    const SizedBox(height: 10),
+                    Text(techSdkData.techSdkItems[index].title),
+                  ],
+                ),
+              );
             },
           ),
         ),
+        const Text('Programming Languages'),
+        const Text(
+            'C, C++, C Sharp, Go, JavaScript (JS),TypeScript (TS),Python, Swift, Kotlin, Dart'),
+        const Text('Frameworks'),
+        const Text('NestJs, NodeJs, Django, Flutter'),
+        const Text('Tools and Platforms:'),
+        const Text('Linux, Docker, Figma, Postman, Postman, MongoDB, Swagger'),
+        const Text('Cloud Services:'),
+        const Text('AWS, Google Cloud Platform, Firebase'),
+        const Text('IDEs & Code Editors:'),
+        const Text('Android Studio, Xcode, Visual Studio Code'),
+        const Text('Version Control and CI/CD:'),
+        const Text('Git, GitHub, GitLab, Codemagic'),
+        const Text('3rd parrty Communication sdks:'),
+        const Text('Twilio, Stream, Agora'),
+        const Text('Project Management Tools:'),
+        const Text('Jira, Trello, Notion'),
       ],
     );
   }

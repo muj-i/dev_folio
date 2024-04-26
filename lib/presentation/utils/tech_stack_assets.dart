@@ -4,7 +4,7 @@ class TechStackAssets {
   static const _root2 = 'https://www.vectorlogo.zone/logos';
   static const _root3 = 'https://www.svgrepo.com/show';
   static const _root4 =
-      'https://getfit-image-file.s3.ap-southeast-1.amazonaws.com';
+      'https://raw.githubusercontent.com/muj-i/muj-i/339a0c662be2bd1b68738025d61a14420b663bc2/icons';
 
   static const c = '$_root/c/c-original.svg';
   static const cpp = '$_root/cplusplus/cplusplus-original.svg';
@@ -27,19 +27,28 @@ class TechStackAssets {
   static const dart = '$_root2/dartlang/dartlang-icon.svg';
   static const gcp = '$_root2/google_cloud/google_cloud-icon.svg';
   static const firebase = '$_root2/firebase/firebase-icon.svg';
-  static const supaBase = '$_root2/appwriteio/appwriteio-icon.svg';
+ static const jira = '$_root2/atlassian_jira/atlassian_jira-icon.svg';
   static const figma = '$_root2/figma/figma-icon.svg';
   static const postMan = '$_root2/getpostman/getpostman-icon.svg';
   static const git = '$_root2/git-scm/git-scm-icon.svg';
+  static const trello = '$_root2/trello/trello-icon.svg';
+  static const twilio = '$_root2/twilio/twilio-tile.svg';
 
   static const swagger = '$_root3/374111/swagger.svg';
 
-  static const dJango = '$_root4/1714074348358djangoproject-svgrepo-com.svg';
+  static const dJango = '$_root4/django.svg';
+  static const agora = '$_root4/agora.svg';
+  static const androidStudio = '$_root4/android-studio-icon.svg';
+  static const xcode = '$_root4/Xcode.svg';
+  static const vsCode = '$_root4/vscode.svg';
+  static const github = '$_root4/github.svg';
+  static const codeMagic = '$_root4/codemagic.svg';
+  static const stream = '$_root4/stream.svg';
+  static const notion = '$_root4/notion.svg';
 
-  static const agora = '$_root4/1714071340926agora.svg';
-  static const androidStudio = '$_root4/1714071629605android-studio-icon.svg';
-  static const xcode = '$_root4/1714071695058Xcode.svg';
-  static const vsCode = '$_root4/1714072392028vscode.svg';
-  static const github = '$_root4/1714072432456github.svg';
-  static const codeMagic = '$_root4/1714072413978codemagic.svg';
+  static const gitlab = 'https://profilinator.rishav.dev/skills-assets/gitlab.svg';
 }
+
+
+
+
