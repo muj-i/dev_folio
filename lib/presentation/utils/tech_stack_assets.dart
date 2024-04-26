@@ -5,6 +5,8 @@ class TechStackAssets {
   static const _root3 = 'https://www.svgrepo.com/show';
   static const _root4 =
       'https://raw.githubusercontent.com/muj-i/muj-i/339a0c662be2bd1b68738025d61a14420b663bc2/icons';
+  static const _root5 =
+      'https://raw.githubusercontent.com/muj-i/muj-i/f12ba1bd2b077c5dc7860d36bf3fca46587d58d7/icons';
 
   static const c = '$_root/c/c-original.svg';
   static const cpp = '$_root/cplusplus/cplusplus-original.svg';
@@ -43,8 +45,8 @@ class TechStackAssets {
   static const vsCode = '$_root4/vscode.svg';
   static const github = '$_root4/github.svg';
   static const codeMagic = '$_root4/codemagic.svg';
-  static const stream = '$_root4/stream.svg';
-  static const notion = '$_root4/notion.svg';
+  static const stream = '$_root5/stream.svg';
+  static const notion = '$_root5/notion.svg';
 
   static const gitlab = 'https://profilinator.rishav.dev/skills-assets/gitlab.svg';
 }
