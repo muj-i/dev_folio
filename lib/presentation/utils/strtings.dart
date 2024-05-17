@@ -10,5 +10,5 @@ class AppStrings {
   static const String myNameIsText = 'My name is';
   static const String whatIDoText = 'I build things in Flutter';
   static const String myTechStackText = 'My Tech Stack';
-  static const String myWorkingTechnologiesText = ' Technologies I’ve been working with recently';
+  static const String myWorkingTechnologiesText = 'Technologies I’ve been working with recently';
 }

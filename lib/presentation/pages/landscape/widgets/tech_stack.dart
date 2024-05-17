@@ -11,19 +11,72 @@ class TechStack extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    TechLanguagesData techLanguagesData = TechLanguagesData();
-    TechFrameworksData techFrameworksData = TechFrameworksData();
-    TechToolsAndPlatformsData techToolsAndPlatformsData =
-        TechToolsAndPlatformsData();
-    TechCloudServicesData techCloudServicesData = TechCloudServicesData();
-    TechVersionControlAndCICDData techVersionControlAndCICDData =
-        TechVersionControlAndCICDData();
+    TechMobileDevData techMobileDevData = TechMobileDevData();
+    TechServerDevData techServerDevData = TechServerDevData();
+    TechDatabaseData techDatabaseData = TechDatabaseData();
+    TechVersionControlAndManagementData techVersionControlAndManagementData =
+        TechVersionControlAndManagementData();
+    TechUIUXData techUIUXData = TechUIUXData();
     TechIDEsAndCodeEditorsData techIDEsAndCodeEditorsData =
         TechIDEsAndCodeEditorsData();
-    Tech3rdPartyCommunicationSdksData tech3rdPartyCommunicationSdksData =
-        Tech3rdPartyCommunicationSdksData();
-    TechProjectManagementToolsData techProjectManagementToolsData =
-        TechProjectManagementToolsData();
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          AppStrings.myTechStackText,
+          style: AppTheme.poppinsTextStyle
+              .copyWith(fontSize: 48, fontWeight: FontWeight.bold),
+        ),
+        ShaderMaskWidget(
+          child: Text(
+            AppStrings.myWorkingTechnologiesText,
+            style: AppTheme.poppinsTextStyle.copyWith(fontSize: 32),
+          ),
+        ),
+        TechStackGridView(
+          title: '#Mobile Development',
+          techSdkItems: techMobileDevData.items,
+        ),
+        TechStackGridView(
+          title: '#Server Side',
+          techSdkItems: techServerDevData.items,
+        ),
+        TechStackGridView(
+          title: '#Database',
+          techSdkItems: techDatabaseData.items,
+        ),
+        TechStackGridView(
+          title: '#Version Control & Management',
+          techSdkItems: techVersionControlAndManagementData.items,
+        ),
+        TechStackGridView(
+          title: '#IDEs & Code Editors',
+          techSdkItems: techIDEsAndCodeEditorsData.items,
+        ),
+        TechStackGridView(
+          title: '#UI/UX Design Tools',
+          techSdkItems: techUIUXData.items,
+        ),
+        const TechStackRow(),
+      ],
+    );
+  }
+}
+
+class TechStackRow extends StatelessWidget {
+  const TechStackRow({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    TechMobileDevData techMobileDevData = TechMobileDevData();
+    TechServerDevData techServerDevData = TechServerDevData();
+    TechDatabaseData techDatabaseData = TechDatabaseData();
+    TechVersionControlAndManagementData techVersionControlAndManagementData =
+        TechVersionControlAndManagementData();
+    TechUIUXData techUIUXData = TechUIUXData();
+    TechIDEsAndCodeEditorsData techIDEsAndCodeEditorsData =
+        TechIDEsAndCodeEditorsData();
 
     return Column(
       children: [
@@ -38,37 +91,39 @@ class TechStack extends StatelessWidget {
             style: AppTheme.poppinsTextStyle.copyWith(fontSize: 32),
           ),
         ),
-        TechStackGridView(
-          title: '#Programming Languages',
-          techSdkItems: techLanguagesData.items,
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            TechStackGridView(
+              title: '#Mobile Development',
+              techSdkItems: techMobileDevData.items,
+            ),
+            TechStackGridView(
+              title: '#Server Side',
+              techSdkItems: techServerDevData.items,
+            ),
+            TechStackGridView(
+              title: '#Database',
+              techSdkItems: techDatabaseData.items,
+            ),
+          ],
         ),
-        TechStackGridView(
-          title: '#Frameworks',
-          techSdkItems: techFrameworksData.items,
-        ),
-        TechStackGridView(
-          title: '#Tools & Platforms',
-          techSdkItems: techToolsAndPlatformsData.items,
-        ),
-        TechStackGridView(
-          title: '#Cloud Services',
-          techSdkItems: techCloudServicesData.items,
-        ),
-        TechStackGridView(
-          title: '#Version Control & CI/CD',
-          techSdkItems: techVersionControlAndCICDData.items,
-        ),
-        TechStackGridView(
-          title: '#IDEs & Code Editors',
-          techSdkItems: techIDEsAndCodeEditorsData.items,
-        ),
-        TechStackGridView(
-          title: '#3rd Party Communication SDKs',
-          techSdkItems: tech3rdPartyCommunicationSdksData.items,
-        ),
-        TechStackGridView(
-          title: '#Project Management Tools',
-          techSdkItems: techProjectManagementToolsData.items,
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            TechStackGridView(
+              title: '#Version Control & Management',
+              techSdkItems: techVersionControlAndManagementData.items,
+            ),
+            TechStackGridView(
+              title: '#IDEs & Code Editors',
+              techSdkItems: techIDEsAndCodeEditorsData.items,
+            ),
+            TechStackGridView(
+              title: '#UI/UX Design Tools',
+              techSdkItems: techUIUXData.items,
+            ),
+          ],
         ),
       ],
     );
