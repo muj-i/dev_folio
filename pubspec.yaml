@@ -13,14 +13,23 @@ dependencies:
   font_awesome_flutter: ^10.7.0
   google_fonts: ^6.2.1
   flutter_svg: ^2.0.10+1
+  url_launcher: ^6.2.6
+  
 
 dev_dependencies: 
   flutter_lints: 3.0.2
+  flutter_launcher_icons: ^0.13.1
   flutter_test: 
     sdk: flutter
+
+flutter_launcher_icons: 
+  web:
+    generate: true
+    image_path: "assets/icon/icon.png"
 
 flutter: 
   uses-material-design: true
   assets:
     - assets/gifs/
     - assets/pngs/
+    - assets/icon/

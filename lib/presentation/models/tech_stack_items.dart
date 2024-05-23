@@ -23,12 +23,18 @@ class TechDatabaseData {
   ];
 }
 
-class TechVersionControlAndManagementData {
+class TechProjectManagementData {
   final List<TechStackModel> items = [
-    TechStackModel(svgImage: TechStackAssets.github, title: 'GitHub'),
     TechStackModel(svgImage: TechStackAssets.notion, title: 'Notion'),
     TechStackModel(svgImage: TechStackAssets.trello, title: 'Trello'),
     TechStackModel(svgImage: TechStackAssets.jira, title: 'Jira'),
+  ];
+}
+
+class TechVersionControlData {
+  final List<TechStackModel> items = [
+    TechStackModel(svgImage: TechStackAssets.git, title: 'Git'),
+    TechStackModel(svgImage: TechStackAssets.github, title: 'GitHub'),
   ];
 }
 

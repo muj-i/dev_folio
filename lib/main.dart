@@ -1,5 +1,5 @@
 import 'package:dev_folio/presentation/pages/landscape/langscape_view.dart';
-import 'package:dev_folio/presentation/pages/portrait_view.dart';
+import 'package:dev_folio/presentation/pages/portrait/portrait_view.dart';
 import 'package:dev_folio/presentation/responsive_layout.dart';
 import 'package:dev_folio/presentation/utils/app_theme.dart';
 import 'package:flutter/material.dart';

@@ -1,5 +1,6 @@
 import 'package:dev_folio/presentation/pages/landscape/widgets/details_part.dart';
-import 'package:dev_folio/presentation/pages/landscape/widgets/tech_stack.dart';
+import 'package:dev_folio/presentation/pages/landscape/widgets/experience_part.dart';
+import 'package:dev_folio/presentation/pages/landscape/widgets/tech_stack_row.dart';
 import 'package:dev_folio/presentation/utils/strtings.dart';
 import 'package:dev_folio/presentation/widgets/shader_mas_widget.dart';
 import 'package:flutter/material.dart';
@@ -10,10 +11,12 @@ class LandscapeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 50),
-      child: Scaffold(
-          appBar: AppBar(
+    return Scaffold(
+      appBar: PreferredSize(
+        preferredSize: const Size.fromHeight(kToolbarHeight),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 50),
+          child: AppBar(
             title: const ShaderMaskWidget(
               child: Text(AppStrings.userName,
                   style: TextStyle(
@@ -42,16 +45,23 @@ class LandscapeView extends StatelessWidget {
               // IconButton(onPressed: () {}, icon: const Icon(FontAwesomeIcons.earth)),
             ],
           ),
-          body: const SingleChildScrollView(
-            child: Column(
-              children: [
-                SizedBox(height: 150),
-                DetailsPart(),
-                SizedBox(height: 150),
-                TechStack(),
-              ],
-            ),
-          )),
+        ),
+      ),
+      body: const SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 50),
+          child: Column(
+            children: [
+              SizedBox(height: 150),
+              DetailsPart(),
+              SizedBox(height: 150),
+              TechStackRow(),
+              SizedBox(height: 100),
+              ExperiencePart(),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
