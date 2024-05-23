@@ -16,14 +16,14 @@ class AboutMe extends StatelessWidget {
           child: Text(
             AppStrings.aboutMeText,
             style: AppTheme.poppinsTextStyle
-                .copyWith(fontSize: 48, fontWeight: FontWeight.bold),
+                .copyWith(fontSize: 45, fontWeight: FontWeight.bold),
           ),
         ),
         const SizedBox(height: 20),
         Text(
           AppStrings.aboutMeDescription,
           style: AppTheme.poppinsTextStyle.copyWith(
-            fontSize: 20,
+            fontSize: 16,
             color: AppColors.black,
           ),
         ),

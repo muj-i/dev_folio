@@ -2,6 +2,7 @@ import 'package:dev_folio/presentation/models/tech_stack_model.dart';
 import 'package:dev_folio/presentation/utils/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 
 class TechStackGridView extends StatelessWidget {
   const TechStackGridView(
@@ -12,7 +13,9 @@ class TechStackGridView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: Get.width < 700
+          ? CrossAxisAlignment.center
+          : CrossAxisAlignment.start,
       children: [
         const SizedBox(height: 30),
         Text(

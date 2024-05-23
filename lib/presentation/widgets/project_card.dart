@@ -37,128 +37,126 @@ class ProjectCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Container(
-        // height: 330,
-        decoration: BoxDecoration(
-          color: AppColors.white,
-          borderRadius: BorderRadius.circular(20),
-          boxShadow: const [
-            BoxShadow(
-              color: Colors.black12,
-              blurRadius: 10,
-              offset: Offset(0, 5),
-            ),
-          ],
-        ),
-        margin: const EdgeInsets.all(10),
-        padding: const EdgeInsets.all(20),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            isCompanyProject == false
-                ? ClipRRect(
-                    borderRadius: BorderRadius.circular(16),
-                    child: Image.network(
-                      projectImage ?? '',
-                      fit: BoxFit.fill,
-                    ),
-                  )
-                : const SizedBox(),
-            const SizedBox(height: 20),
-            Text(
-              projectName ?? '',
-              style: const TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            const SizedBox(height: 10),
-            Text(
-              projectDescription ?? '',
-              style: const TextStyle(
-                fontSize: 18,
-              ),
-            ),
-            const SizedBox(height: 10),
-            Text(
-              techStack ?? '',
-              style: const TextStyle(
-                fontSize: 14,
-              ),
-            ),
-            const SizedBox(height: 10),
-            isCompanyProject == true
-                ? Row(
-                    children: [
-                      const Text(
-                        'Preview',
-                        style: TextStyle(
-                          fontSize: 14,
-                        ),
-                      ),
-                      const SizedBox(width: 10),
-                      InkWell(
-                        onTap: onTapAppStore,
-                        child: Image.asset(
-                          AppAssets.appStoreLogo,
-                          height: 20,
-                        ),
-                      ),
-                      const SizedBox(width: 10),
-                      InkWell(
-                        onTap: onTapPlayStore,
-                        child: Image.asset(
-                          AppAssets.playStoreLogo,
-                          height: 20,
-                        ),
-                      ),
-                    ],
-                  )
-                : Row(
-                    children: [
-                      const Text(
-                        'Preview',
-                        style: TextStyle(
-                          fontSize: 14,
-                        ),
-                      ),
-                      const SizedBox(width: 10),
-                      InkWell(
-                          onTap: onTapGithub,
-                          child: const Icon(
-                            FontAwesomeIcons.github,
-                            size: 20,
-                          )),
-                      const SizedBox(width: 10),
-                      InkWell(
-                          onTap: onTapYoutube,
-                          child: const Icon(
-                            FontAwesomeIcons.youtube,
-                            size: 20,
-                          )),
-                      const SizedBox(width: 10),
-                      onTapLinkedin == null
-                          ? const SizedBox()
-                          : InkWell(
-                              onTap: onTapLinkedin,
-                              child: const Icon(
-                                FontAwesomeIcons.linkedin,
-                                size: 20,
-                              )),
-                      const SizedBox(width: 10),
-                      onTapAndroid == null
-                          ? const SizedBox()
-                          : InkWell(
-                              onTap: onTapAndroid,
-                              child: const Icon(
-                                FontAwesomeIcons.android,
-                                size: 20,
-                              )),
-                    ],
+    return Container(
+      // height: 330,
+      decoration: BoxDecoration(
+        color: AppColors.white,
+        borderRadius: BorderRadius.circular(20),
+        boxShadow: const [
+          BoxShadow(
+            color: Colors.black12,
+            blurRadius: 10,
+            offset: Offset(0, 5),
+          ),
+        ],
+      ),
+      margin: const EdgeInsets.all(10),
+      padding: const EdgeInsets.all(20),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          isCompanyProject == false
+              ? ClipRRect(
+                  borderRadius: BorderRadius.circular(16),
+                  child: Image.network(
+                    projectImage ?? '',
+                    fit: BoxFit.fill,
                   ),
-          ],
-        ),
+                )
+              : const SizedBox(),
+          const SizedBox(height: 20),
+          Text(
+            projectName ?? '',
+            style: const TextStyle(
+              fontSize: 24,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          const SizedBox(height: 10),
+          Text(
+            projectDescription ?? '',
+            style: const TextStyle(
+              fontSize: 18,
+            ),
+          ),
+          const SizedBox(height: 10),
+          Text(
+            techStack ?? '',
+            style: const TextStyle(
+              fontSize: 14,
+            ),
+          ),
+          const SizedBox(height: 10),
+          isCompanyProject == true
+              ? Row(
+                  children: [
+                    const Text(
+                      'Preview',
+                      style: TextStyle(
+                        fontSize: 14,
+                      ),
+                    ),
+                    const SizedBox(width: 10),
+                    InkWell(
+                      onTap: onTapAppStore,
+                      child: Image.asset(
+                        AppAssets.appStoreLogo,
+                        height: 20,
+                      ),
+                    ),
+                    const SizedBox(width: 10),
+                    InkWell(
+                      onTap: onTapPlayStore,
+                      child: Image.asset(
+                        AppAssets.playStoreLogo,
+                        height: 20,
+                      ),
+                    ),
+                  ],
+                )
+              : Row(
+                  children: [
+                    const Text(
+                      'Preview',
+                      style: TextStyle(
+                        fontSize: 14,
+                      ),
+                    ),
+                    const SizedBox(width: 10),
+                    InkWell(
+                        onTap: onTapGithub,
+                        child: const Icon(
+                          FontAwesomeIcons.github,
+                          size: 20,
+                        )),
+                    const SizedBox(width: 10),
+                    InkWell(
+                        onTap: onTapYoutube,
+                        child: const Icon(
+                          FontAwesomeIcons.youtube,
+                          size: 20,
+                        )),
+                    const SizedBox(width: 10),
+                    onTapLinkedin == null
+                        ? const SizedBox()
+                        : InkWell(
+                            onTap: onTapLinkedin,
+                            child: const Icon(
+                              FontAwesomeIcons.linkedin,
+                              size: 20,
+                            )),
+                    const SizedBox(width: 10),
+                    onTapAndroid == null
+                        ? const SizedBox()
+                        : InkWell(
+                            onTap: onTapAndroid,
+                            child: const Icon(
+                              FontAwesomeIcons.android,
+                              size: 20,
+                            )),
+                  ],
+                ),
+        ],
       ),
     );
   }

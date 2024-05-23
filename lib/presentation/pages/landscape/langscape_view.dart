@@ -1,4 +1,4 @@
-import 'package:dev_folio/presentation/pages/landscape/widgets/about_me.dart';
+import 'package:dev_folio/presentation/widgets/about_me.dart';
 import 'package:dev_folio/presentation/pages/landscape/widgets/contact_me.dart';
 import 'package:dev_folio/presentation/pages/landscape/widgets/details_part.dart';
 import 'package:dev_folio/presentation/pages/landscape/widgets/experience_part.dart';
@@ -45,60 +45,7 @@ class _LandscapeViewState extends State<LandscapeView> {
         preferredSize: const Size.fromHeight(kToolbarHeight),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 50),
-          child: AppBar(
-            title: const ShaderMaskWidget(
-              child: Text(AppStrings.userName,
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    wordSpacing: 5.0,
-                  )),
-            ),
-            actions: [
-              TextButton(
-                  onPressed: () {
-                    scrollToSection(_sectionDetailPartKey);
-                  },
-                  child: const Text(AppStrings.home)),
-              TextButton(
-                  onPressed: () {
-                    scrollToSection(_sectionAbouttMeKey);
-                  },
-                  child: const Text(AppStrings.about)),
-              TextButton(
-                  onPressed: () {
-                    scrollToSection(_sectionTechStackRowKey);
-                  },
-                  child: const Text(AppStrings.techStack)),
-              TextButton(
-                  onPressed: () {
-                    scrollToSection(_sectionExperienceKey);
-                  },
-                  child: const Text(AppStrings.experience)),
-              TextButton(
-                  onPressed: () {
-                    scrollToSection(_sectionProjectsKey);
-                  },
-                  child: const Text(AppStrings.projects)),
-              TextButton(
-                  onPressed: () {
-                    scrollToSection(_sectionContactMeKey);
-                  },
-                  child: const Text(AppStrings.contact)),
-              const SizedBox(width: 10),
-              IconButton(
-                  onPressed: () async {
-                    await launchUrl(Uri.parse('https://github.com/muj-i'));
-                  },
-                  icon: const Icon(FontAwesomeIcons.squareGithub)),
-              const SizedBox(width: 2),
-              IconButton(
-                  onPressed: () async {
-                    await launchUrl(
-                        Uri.parse('https://www.linkedin.com/in/muj-i/'));
-                  },
-                  icon: const Icon(FontAwesomeIcons.linkedin)),
-            ],
-          ),
+          child: appBar(),
         ),
       ),
       body: SingleChildScrollView(
@@ -106,7 +53,7 @@ class _LandscapeViewState extends State<LandscapeView> {
           padding: const EdgeInsets.symmetric(horizontal: 50),
           child: Column(
             children: [
-              const SizedBox(height: 150),
+              const SizedBox(height: 100),
               Container(
                 key: _sectionDetailPartKey,
                 child: const DetailsPart(),
@@ -144,6 +91,63 @@ class _LandscapeViewState extends State<LandscapeView> {
         ),
       ),
     );
+  }
+
+  AppBar appBar() {
+    return AppBar(
+          title: const ShaderMaskWidget(
+            child: Text(AppStrings.userName,
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  wordSpacing: 5.0,
+                )),
+          ),
+          actions: [
+            TextButton(
+                onPressed: () {
+                  scrollToSection(_sectionDetailPartKey);
+                },
+                child: const Text(AppStrings.home)),
+            TextButton(
+                onPressed: () {
+                  scrollToSection(_sectionAbouttMeKey);
+                },
+                child: const Text(AppStrings.about)),
+            TextButton(
+                onPressed: () {
+                  scrollToSection(_sectionTechStackRowKey);
+                },
+                child: const Text(AppStrings.techStack)),
+            TextButton(
+                onPressed: () {
+                  scrollToSection(_sectionExperienceKey);
+                },
+                child: const Text(AppStrings.experience)),
+            TextButton(
+                onPressed: () {
+                  scrollToSection(_sectionProjectsKey);
+                },
+                child: const Text(AppStrings.projects)),
+            TextButton(
+                onPressed: () {
+                  scrollToSection(_sectionContactMeKey);
+                },
+                child: const Text(AppStrings.contact)),
+            const SizedBox(width: 10),
+            IconButton(
+                onPressed: () async {
+                  await launchUrl(Uri.parse('https://github.com/muj-i'));
+                },
+                icon: const Icon(FontAwesomeIcons.squareGithub)),
+            const SizedBox(width: 2),
+            IconButton(
+                onPressed: () async {
+                  await launchUrl(
+                      Uri.parse('https://www.linkedin.com/in/muj-i/'));
+                },
+                icon: const Icon(FontAwesomeIcons.linkedin)),
+          ],
+        );
   }
 
   Row bottomButtonPortion(BuildContext context) {

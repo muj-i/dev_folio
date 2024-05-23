@@ -26,7 +26,7 @@ class TechStackRow extends StatelessWidget {
         Text(
           AppStrings.myTechStackText,
           style: AppTheme.poppinsTextStyle
-              .copyWith(fontSize: 48, fontWeight: FontWeight.bold),
+              .copyWith(fontSize: 45, fontWeight: FontWeight.bold),
         ),
         ShaderMaskWidget(
           child: Text(

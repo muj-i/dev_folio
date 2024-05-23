@@ -16,7 +16,7 @@ class ContactMe extends StatelessWidget {
           child: Text(
             AppStrings.contactMeText,
             style: AppTheme.poppinsTextStyle
-                .copyWith(fontSize: 48, fontWeight: FontWeight.bold),
+                .copyWith(fontSize: 45, fontWeight: FontWeight.bold),
           ),
         ),
         const SizedBox(height: 20),

@@ -12,8 +12,8 @@ class TechStackColumn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     TechMobileDevData techMobileDevData = TechMobileDevData();
-    TechServerDevData techServerDevData = TechServerDevData();
-    TechDatabaseData techDatabaseData = TechDatabaseData();
+    // TechServerDevData techServerDevData = TechServerDevData();
+    // TechDatabaseData techDatabaseData = TechDatabaseData();
     TechProjectManagementData techProjectManagementData =
         TechProjectManagementData();
     TechVersionControlData techVersionControlData = TechVersionControlData();
@@ -22,17 +22,18 @@ class TechStackColumn extends StatelessWidget {
         TechIDEsAndCodeEditorsData();
 
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Text(
           AppStrings.myTechStackText,
           style: AppTheme.poppinsTextStyle
-              .copyWith(fontSize: 48, fontWeight: FontWeight.bold),
+              .copyWith(fontSize: 45, fontWeight: FontWeight.bold),
         ),
         ShaderMaskWidget(
           child: Text(
             AppStrings.myWorkingTechnologiesText,
             style: AppTheme.poppinsTextStyle.copyWith(fontSize: 32),
+            textAlign: TextAlign.center,
           ),
         ),
         TechStackGridView(
@@ -40,13 +41,17 @@ class TechStackColumn extends StatelessWidget {
           techSdkItems: techMobileDevData.items,
         ),
         TechStackGridView(
-          title: '#Server Side',
-          techSdkItems: techServerDevData.items,
+          title: '#IDEs & Code Editors',
+          techSdkItems: techIDEsAndCodeEditorsData.items,
         ),
-        TechStackGridView(
-          title: '#Database',
-          techSdkItems: techDatabaseData.items,
-        ),
+        // TechStackGridView(
+        //   title: '#Server Side',
+        //   techSdkItems: techServerDevData.items,
+        // ),
+        // TechStackGridView(
+        //   title: '#Database',
+        //   techSdkItems: techDatabaseData.items,
+        // ),
         TechStackGridView(
           title: '#Version Control',
           techSdkItems: techVersionControlData.items,
@@ -55,10 +60,7 @@ class TechStackColumn extends StatelessWidget {
           title: '#Project Management',
           techSdkItems: techProjectManagementData.items,
         ),
-        TechStackGridView(
-          title: '#IDEs & Code Editors',
-          techSdkItems: techIDEsAndCodeEditorsData.items,
-        ),
+
         TechStackGridView(
           title: '#UI/UX Design Tools',
           techSdkItems: techUIUXData.items,
