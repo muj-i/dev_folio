@@ -1,3 +1,5 @@
+import 'package:dev_folio/presentation/pages/landscape/widgets/about_me.dart';
+import 'package:dev_folio/presentation/pages/landscape/widgets/contact_me.dart';
 import 'package:dev_folio/presentation/pages/landscape/widgets/details_part.dart';
 import 'package:dev_folio/presentation/pages/landscape/widgets/experience_part.dart';
 import 'package:dev_folio/presentation/pages/landscape/widgets/projects_part.dart';
@@ -31,6 +33,8 @@ class LandscapeView extends StatelessWidget {
               TextButton(onPressed: () {}, child: const Text(AppStrings.about)),
               TextButton(
                   onPressed: () {}, child: const Text(AppStrings.techStack)),
+              TextButton(
+                  onPressed: () {}, child: const Text(AppStrings.experience)),
               TextButton(
                   onPressed: () {}, child: const Text(AppStrings.projects)),
               TextButton(
@@ -67,6 +71,11 @@ class LandscapeView extends StatelessWidget {
               ExperiencePart(),
               SizedBox(height: 100),
               ProjectPart(),
+              SizedBox(height: 100),
+              AboutMe(),
+              SizedBox(height: 100),
+              ContactMe(),
+              SizedBox(height: 50),
             ],
           ),
         ),
