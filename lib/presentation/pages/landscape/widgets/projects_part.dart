@@ -4,8 +4,8 @@ import 'package:dev_folio/presentation/widgets/project_card.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class ProjectPart extends StatelessWidget {
-  const ProjectPart({super.key});
+class ProjectsPart extends StatelessWidget {
+  const ProjectsPart({super.key});
 
   @override
   Widget build(BuildContext context) {

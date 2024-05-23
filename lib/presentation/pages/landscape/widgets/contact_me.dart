@@ -1,7 +1,6 @@
 import 'package:dev_folio/presentation/utils/app_colors.dart';
 import 'package:dev_folio/presentation/utils/app_theme.dart';
 import 'package:dev_folio/presentation/utils/strtings.dart';
-import 'package:dev_folio/presentation/widgets/shader_mas_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -70,45 +69,6 @@ class ContactMe extends StatelessWidget {
           color: AppColors.purpleGrey.withOpacity(.3),
         ),
         const SizedBox(height: 20),
-        Row(
-          children: [
-            TextButton(onPressed: () {}, child: const Text(AppStrings.home)),
-            TextButton(onPressed: () {}, child: const Text(AppStrings.about)),
-            TextButton(
-                onPressed: () {}, child: const Text(AppStrings.techStack)),
-            TextButton(
-                onPressed: () {}, child: const Text(AppStrings.experience)),
-            TextButton(
-                onPressed: () {}, child: const Text(AppStrings.projects)),
-            TextButton(onPressed: () {}, child: const Text(AppStrings.contact)),
-            const Spacer(),
-            MediaQuery.of(context).size.width > 1100
-                ? Row(
-                    children: [
-                      Text('Designed by',
-                          style:
-                              AppTheme.aBeeZeeTextStyle.copyWith(fontSize: 16)),
-                      ShaderMaskWidget(
-                        child: Text(' Pavan MG',
-                            style: AppTheme.aBeeZeeTextStyle
-                                .copyWith(fontSize: 16)),
-                      ),
-                      Text(' & Developed by',
-                          style:
-                              AppTheme.aBeeZeeTextStyle.copyWith(fontSize: 16)),
-                      ShaderMaskWidget(
-                        child: Text(' Mujahidul Islam',
-                            style: AppTheme.aBeeZeeTextStyle
-                                .copyWith(fontSize: 16)),
-                      ),
-                      Text(' With ❤️',
-                          style:
-                              AppTheme.aBeeZeeTextStyle.copyWith(fontSize: 16)),
-                    ],
-                  )
-                : const SizedBox(),
-          ],
-        )
       ],
     );
   }

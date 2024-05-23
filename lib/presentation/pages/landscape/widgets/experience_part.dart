@@ -31,7 +31,7 @@ class ExperiencePart extends StatelessWidget {
                 Text(
                   'Flutter Developer',
                   style: AppTheme.poppinsTextStyle.copyWith(
-                    fontSize: 24,
+                    fontSize: 20,
                     fontWeight: FontWeight.bold,
                     color: AppColors.black,
                   ),
@@ -39,14 +39,14 @@ class ExperiencePart extends StatelessWidget {
                 Text(
                   'Bringin Technologies Limited,',
                   style: AppTheme.poppinsTextStyle.copyWith(
-                    fontSize: 24,
+                    fontSize: 20,
                     color: AppColors.black,
                   ),
                 ),
                 Text(
                   'Dhaka, Bangladesh.',
                   style: AppTheme.poppinsTextStyle.copyWith(
-                    fontSize: 24,
+                    fontSize: 20,
                     color: AppColors.black,
                   ),
                 ),
@@ -58,19 +58,19 @@ class ExperiencePart extends StatelessWidget {
                 Text(
                   'June 2023 - May 2024',
                   style: AppTheme.poppinsTextStyle.copyWith(
-                    fontSize: 24,
+                    fontSize: 20,
                     color: AppColors.black,
                   ),
                 ),
                 InkWell(
                   onTap: () async {
                     await launchUrl(Uri.parse(
-                        'https://github.com/muj-i/muj-i/blob/main/Experience%20Letter.pdf'));
+                        'https://www.icloud.com/iclouddrive/09cUao7OHItu4-OVeimpdsMzA#Experience_Letter'));
                   },
                   child: Text(
                     'Letter of Experience.',
                     style: AppTheme.poppinsTextStyle.copyWith(
-                      fontSize: 24,
+                      fontSize: 20,
                       color: AppColors.blue,
                       decoration: TextDecoration.underline,
                       decorationColor: AppColors.blue
@@ -85,7 +85,7 @@ class ExperiencePart extends StatelessWidget {
         Text(
           'Responsibilities:',
           style: AppTheme.poppinsTextStyle.copyWith(
-            fontSize: 24,
+            fontSize: 20,
             fontWeight: FontWeight.bold,
             color: AppColors.black,
           ),
@@ -94,7 +94,7 @@ class ExperiencePart extends StatelessWidget {
         Text(
           '• Designed and developed highly scalable features using GetX state management and REST APIs.',
           style: AppTheme.poppinsTextStyle.copyWith(
-            fontSize: 22,
+            fontSize: 18,
             color: AppColors.black,
           ),
         ),
@@ -102,7 +102,7 @@ class ExperiencePart extends StatelessWidget {
         Text(
           '• Optimized app performance through code refactoring and efficient use of Socket.io for real-time updates.',
           style: AppTheme.poppinsTextStyle.copyWith(
-            fontSize: 22,
+            fontSize: 18,
             color: AppColors.black,
           ),
         ),
@@ -110,7 +110,7 @@ class ExperiencePart extends StatelessWidget {
         Text(
           '• Successfully implemented Agora SDK for in-app voice and video calling, enhancing user engagement.',
           style: AppTheme.poppinsTextStyle.copyWith(
-            fontSize: 22,
+            fontSize: 18,
             color: AppColors.black,
           ),
         ),
@@ -118,7 +118,7 @@ class ExperiencePart extends StatelessWidget {
         Text(
           '• Collaborated effectively within an Agile development team, adhering to CI/CD practices.',
           style: AppTheme.poppinsTextStyle.copyWith(
-            fontSize: 22,
+            fontSize: 18,
             color: AppColors.black,
           ),
         ),
@@ -126,7 +126,7 @@ class ExperiencePart extends StatelessWidget {
         Text(
           '• Maintained clean and well-documented code, ensuring maintainability and code quality.',
           style: AppTheme.poppinsTextStyle.copyWith(
-            fontSize: 22,
+            fontSize: 18,
             color: AppColors.black,
           ),
         ),
@@ -134,7 +134,7 @@ class ExperiencePart extends StatelessWidget {
         Text(
           'Contributions:',
           style: AppTheme.poppinsTextStyle.copyWith(
-            fontSize: 24,
+            fontSize: 20,
             fontWeight: FontWeight.bold,
             color: AppColors.black,
           ),
