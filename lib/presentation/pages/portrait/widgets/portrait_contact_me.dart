@@ -1,7 +1,6 @@
 import 'package:dev_folio/presentation/utils/app_colors.dart';
 import 'package:dev_folio/presentation/utils/app_theme.dart';
 import 'package:dev_folio/presentation/utils/strtings.dart';
-import 'package:dev_folio/presentation/widgets/shader_mas_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -46,35 +45,7 @@ class PortraitContactMe extends StatelessWidget {
           width: double.infinity,
           color: AppColors.purpleGrey.withOpacity(.3),
         ),
-        const SizedBox(height: 20),
-        Column(
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text('Designed by',
-                    style: AppTheme.aBeeZeeTextStyle.copyWith(fontSize: 10)),
-                ShaderMaskWidget(
-                  child: Text(' Pavan MG',
-                      style: AppTheme.aBeeZeeTextStyle.copyWith(fontSize: 10)),
-                ),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text('Developed by',
-                    style: AppTheme.aBeeZeeTextStyle.copyWith(fontSize: 10)),
-                ShaderMaskWidget(
-                  child: Text(' Mujahedul Islam',
-                      style: AppTheme.aBeeZeeTextStyle.copyWith(fontSize: 10)),
-                ),
-              ],
-            ),
-            Text(' With ❤️',
-                style: AppTheme.aBeeZeeTextStyle.copyWith(fontSize: 10)),
-          ],
-        )
+        const SizedBox(height: 10),
       ],
     );
   }
