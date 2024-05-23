@@ -53,10 +53,10 @@ class PortraitContactMe extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text('Designed by',
-                    style: AppTheme.aBeeZeeTextStyle.copyWith(fontSize: 12)),
+                    style: AppTheme.aBeeZeeTextStyle.copyWith(fontSize: 10)),
                 ShaderMaskWidget(
                   child: Text(' Pavan MG',
-                      style: AppTheme.aBeeZeeTextStyle.copyWith(fontSize: 12)),
+                      style: AppTheme.aBeeZeeTextStyle.copyWith(fontSize: 10)),
                 ),
               ],
             ),
@@ -64,15 +64,15 @@ class PortraitContactMe extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text('Developed by',
-                    style: AppTheme.aBeeZeeTextStyle.copyWith(fontSize: 12)),
+                    style: AppTheme.aBeeZeeTextStyle.copyWith(fontSize: 10)),
                 ShaderMaskWidget(
                   child: Text(' Mujahedul Islam',
-                      style: AppTheme.aBeeZeeTextStyle.copyWith(fontSize: 12)),
+                      style: AppTheme.aBeeZeeTextStyle.copyWith(fontSize: 10)),
                 ),
               ],
             ),
             Text(' With ❤️',
-                style: AppTheme.aBeeZeeTextStyle.copyWith(fontSize: 12)),
+                style: AppTheme.aBeeZeeTextStyle.copyWith(fontSize: 10)),
           ],
         )
       ],
