@@ -39,15 +39,6 @@ class _LandscapeViewState extends State<LandscapeView> {
   }
 
   @override
-  initState() {
-    super.initState();
-    Future.delayed(
-      const Duration(milliseconds: 500),
-      () => scrollToSection(_sectionAbouttMeKey),
-    );
-  }
-
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
