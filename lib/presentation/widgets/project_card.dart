@@ -1,6 +1,7 @@
 import 'package:dev_folio/presentation/utils/app_assets.dart';
 import 'package:dev_folio/presentation/utils/app_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ProjectCard extends StatelessWidget {
   const ProjectCard(
@@ -13,7 +14,10 @@ class ProjectCard extends StatelessWidget {
       this.playStoreLink,
       this.isCompanyProject = false,
       this.onTapAppStore,
-      this.onTapPlayStore});
+      this.onTapPlayStore,
+      this.onTapGithub,
+      this.onTapYoutube});
+
   final String? projectImage;
   final String? projectName;
   final String? projectDescription;
@@ -23,10 +27,14 @@ class ProjectCard extends StatelessWidget {
   final bool? isCompanyProject;
   final VoidCallback? onTapAppStore;
   final VoidCallback? onTapPlayStore;
+  final VoidCallback? onTapGithub;
+  final VoidCallback? onTapYoutube;
+
   @override
   Widget build(BuildContext context) {
     return Expanded(
       child: Container(
+        // height: 330,
         decoration: BoxDecoration(
           color: AppColors.white,
           borderRadius: BorderRadius.circular(20),
@@ -96,7 +104,32 @@ class ProjectCard extends StatelessWidget {
                       ),
                     ],
                   )
-                : Container(),
+                : Row(
+                    children: [
+                      const Text(
+                        'Preview',
+                        style: TextStyle(
+                          fontSize: 14,
+                        ),
+                      ),
+                      const SizedBox(width: 7),
+                      const Icon(Icons.link),
+                      const SizedBox(width: 10),
+                      InkWell(
+                          onTap: onTapGithub,
+                          child: const Icon(
+                            FontAwesomeIcons.github,
+                            size: 20,
+                          )),
+                      const SizedBox(width: 10),
+                      InkWell(
+                          onTap: onTapYoutube,
+                          child: const Icon(
+                            FontAwesomeIcons.youtube,
+                            size: 20,
+                          )),
+                    ],
+                  ),
           ],
         ),
       ),

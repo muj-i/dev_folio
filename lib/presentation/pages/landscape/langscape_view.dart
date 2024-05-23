@@ -1,5 +1,6 @@
 import 'package:dev_folio/presentation/pages/landscape/widgets/details_part.dart';
 import 'package:dev_folio/presentation/pages/landscape/widgets/experience_part.dart';
+import 'package:dev_folio/presentation/pages/landscape/widgets/projects_part.dart';
 import 'package:dev_folio/presentation/pages/landscape/widgets/tech_stack_row.dart';
 import 'package:dev_folio/presentation/utils/strtings.dart';
 import 'package:dev_folio/presentation/widgets/shader_mas_widget.dart';
@@ -52,12 +53,14 @@ class LandscapeView extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 50),
           child: Column(
             children: [
-              SizedBox(height: 150),
-              DetailsPart(),
-              SizedBox(height: 150),
-              TechStackRow(),
-              SizedBox(height: 100),
-              ExperiencePart(),
+              // SizedBox(height: 150),
+              // DetailsPart(),
+              // SizedBox(height: 150),
+              // TechStackRow(),
+              // SizedBox(height: 100),
+              // ExperiencePart(),
+              // SizedBox(height: 100),
+              ProjectPart(),
             ],
           ),
         ),
