@@ -2,6 +2,7 @@ import 'package:dev_folio/presentation/utils/app_theme.dart';
 import 'package:dev_folio/presentation/utils/strtings.dart';
 import 'package:dev_folio/presentation/widgets/project_card.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ProjectPart extends StatelessWidget {
   const ProjectPart({super.key});
@@ -20,29 +21,68 @@ class ProjectPart extends StatelessWidget {
         ),
         const SizedBox(height: 20),
         Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             ProjectCard(
+              projectImage:
+                  'https://raw.githubusercontent.com/muj-i/mocks/main/crafty_bay.png',
               projectName: 'CraftyBay',
               projectDescription:
                   'CraftyBay is a feature-rich ecommerce app designed to provide users with a seamless and enjoyable shopping experience. With a focus on user-friendliness and a wide range of products, CraftyBay allows users to explore, purchase, and review products with ease.',
               techStack: 'Tech stack: Flutter, Laravel, MySQL',
-              onTapGithub: () {},
-              onTapYoutube: () {},
+              onTapGithub: () async {
+                await launchUrl(
+                    Uri.parse('https://github.com/muj-i/crafty_bay'));
+              },
+              onTapYoutube: () async {
+                await launchUrl(Uri.parse(
+                    'https://youtu.be/XqyM8PjxwwY?si=LrlHvkVDRe_XgfpV'));
+              },
+              onTapAndroid: () async {
+                await launchUrl(Uri.parse(
+                    'https://github.com/muj-i/crafty_bay/releases/download/v1.a1/CraftyBay.apk'));
+              },
             ),
             ProjectCard(
+              projectImage:
+                  'https://raw.githubusercontent.com/muj-i/mocks/main/ProgressPal.png',
               projectName: 'ProgressPal',
-              projectDescription: '',
+              projectDescription:
+                  'Elevate your productivity with Progress Pal, a meticulously crafted task manager application designed to streamline your journey towards achieving your goals. With its sleek design and intuitive user interface, Progress Pal redefines task management, making it an indispensable companion for both personal and professional endeavors.',
               techStack: 'Tech stack: Flutter, Laravel, MongoDB',
-              onTapGithub: () {},
-              onTapYoutube: () {},
+              onTapGithub: () async {
+                await launchUrl(
+                    Uri.parse('https://github.com/muj-i/progress_pal'));
+              },
+              onTapLinkedin: () async {
+                await launchUrl(Uri.parse(
+                    'https://www.linkedin.com/posts/muj-i_taskmanagerapp-appdevelopment-getxframwork-activity-7103689900159377408-TUT7/?utm_source=share&utm_medium=member_desktop'));
+              },
+              onTapYoutube: () async {
+                await launchUrl(Uri.parse(
+                    'https://youtu.be/TBhSP3-sAiE?si=zuS-vWPbPQlvq_28'));
+              },
+              onTapAndroid: () async {
+                await launchUrl(Uri.parse(
+                    'https://github.com/muj-i/progress_pal/releases/download/v1.1.1/Progress.Pal.apk'));
+              },
             ),
             ProjectCard(
+              projectImage:
+                  'https://raw.githubusercontent.com/muj-i/mocks/main/WEATHER.png',
               projectName: 'W E A T H E R !',
-              projectDescription: '',
+              projectDescription:
+                  'W E A T H E R ! is a simple and intuitive application that allows users to check the current weather conditions for different locations. With a clean and visually appealing interface, users can easily enter a location and get real-time weather information.',
               techStack: 'Tech stack: Flutter, OpenWeatherMap API',
-              onTapGithub: () {},
-              onTapYoutube: () {},
+              onTapGithub: () async {
+                await launchUrl(Uri.parse(
+                    'https://github.com/muj-i/Flutter-Practice/tree/main/Assignments/mod9asgmt'));
+              },
+              onTapYoutube: () async {
+                await launchUrl(Uri.parse(
+                    'https://youtu.be/fBMRxnt_rAo?si=7hNcDXnTsAdKOCPf'));
+              },
             )
           ],
         )

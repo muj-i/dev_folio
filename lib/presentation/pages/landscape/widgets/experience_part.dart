@@ -3,7 +3,6 @@ import 'package:dev_folio/presentation/utils/app_theme.dart';
 import 'package:dev_folio/presentation/utils/strtings.dart';
 import 'package:dev_folio/presentation/widgets/project_card.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ExperiencePart extends StatelessWidget {
@@ -72,15 +71,12 @@ class ExperiencePart extends StatelessWidget {
                     'Letter of Experience.',
                     style: AppTheme.poppinsTextStyle.copyWith(
                       fontSize: 24,
-                      color: AppColors.black,
+                      color: AppColors.blue,
+                      decoration: TextDecoration.underline,
+                      decorationColor: AppColors.blue
                     ),
                   ),
                 ),
-                Container(
-                  height: 1,
-                  width: Get.width / 4,
-                  color: AppColors.black,
-                )
               ],
             )
           ],
@@ -144,6 +140,7 @@ class ExperiencePart extends StatelessWidget {
           ),
         ),
         Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             ProjectCard(

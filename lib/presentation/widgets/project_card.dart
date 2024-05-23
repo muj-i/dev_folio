@@ -4,19 +4,22 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ProjectCard extends StatelessWidget {
-  const ProjectCard(
-      {super.key,
-      this.projectImage,
-      this.projectName,
-      this.projectDescription,
-      this.techStack,
-      this.appStoreLink,
-      this.playStoreLink,
-      this.isCompanyProject = false,
-      this.onTapAppStore,
-      this.onTapPlayStore,
-      this.onTapGithub,
-      this.onTapYoutube});
+  const ProjectCard({
+    super.key,
+    this.projectImage,
+    this.projectName,
+    this.projectDescription,
+    this.techStack,
+    this.appStoreLink,
+    this.playStoreLink,
+    this.isCompanyProject = false,
+    this.onTapAppStore,
+    this.onTapPlayStore,
+    this.onTapGithub,
+    this.onTapYoutube,
+    this.onTapLinkedin,
+    this.onTapAndroid,
+  });
 
   final String? projectImage;
   final String? projectName;
@@ -29,6 +32,8 @@ class ProjectCard extends StatelessWidget {
   final VoidCallback? onTapPlayStore;
   final VoidCallback? onTapGithub;
   final VoidCallback? onTapYoutube;
+  final VoidCallback? onTapLinkedin;
+  final VoidCallback? onTapAndroid;
 
   @override
   Widget build(BuildContext context) {
@@ -51,8 +56,16 @@ class ProjectCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Image.asset(name),
-            // const SizedBox(height: 20),
+            isCompanyProject == false
+                ? ClipRRect(
+                    borderRadius: BorderRadius.circular(16),
+                    child: Image.network(
+                      projectImage ?? '',
+                      fit: BoxFit.fill,
+                    ),
+                  )
+                : const SizedBox(),
+            const SizedBox(height: 20),
             Text(
               projectName ?? '',
               style: const TextStyle(
@@ -84,8 +97,6 @@ class ProjectCard extends StatelessWidget {
                           fontSize: 14,
                         ),
                       ),
-                      const SizedBox(width: 7),
-                      const Icon(Icons.link),
                       const SizedBox(width: 10),
                       InkWell(
                         onTap: onTapAppStore,
@@ -112,8 +123,6 @@ class ProjectCard extends StatelessWidget {
                           fontSize: 14,
                         ),
                       ),
-                      const SizedBox(width: 7),
-                      const Icon(Icons.link),
                       const SizedBox(width: 10),
                       InkWell(
                           onTap: onTapGithub,
@@ -128,6 +137,24 @@ class ProjectCard extends StatelessWidget {
                             FontAwesomeIcons.youtube,
                             size: 20,
                           )),
+                      const SizedBox(width: 10),
+                      onTapLinkedin == null
+                          ? const SizedBox()
+                          : InkWell(
+                              onTap: onTapLinkedin,
+                              child: const Icon(
+                                FontAwesomeIcons.linkedin,
+                                size: 20,
+                              )),
+                      const SizedBox(width: 10),
+                      onTapAndroid == null
+                          ? const SizedBox()
+                          : InkWell(
+                              onTap: onTapAndroid,
+                              child: const Icon(
+                                FontAwesomeIcons.android,
+                                size: 20,
+                              )),
                     ],
                   ),
           ],

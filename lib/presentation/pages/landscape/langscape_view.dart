@@ -6,6 +6,7 @@ import 'package:dev_folio/presentation/utils/strtings.dart';
 import 'package:dev_folio/presentation/widgets/shader_mas_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class LandscapeView extends StatelessWidget {
   const LandscapeView({super.key});
@@ -36,11 +37,16 @@ class LandscapeView extends StatelessWidget {
                   onPressed: () {}, child: const Text(AppStrings.contact)),
               const SizedBox(width: 10),
               IconButton(
-                  onPressed: () {},
+                  onPressed: () async {
+                    await launchUrl(Uri.parse('https://github.com/muj-i'));
+                  },
                   icon: const Icon(FontAwesomeIcons.squareGithub)),
               const SizedBox(width: 2),
               IconButton(
-                  onPressed: () {},
+                  onPressed: () async {
+                    await launchUrl(
+                        Uri.parse('https://www.linkedin.com/in/muj-i/'));
+                  },
                   icon: const Icon(FontAwesomeIcons.linkedin)),
 
               // IconButton(onPressed: () {}, icon: const Icon(FontAwesomeIcons.earth)),
@@ -53,13 +59,13 @@ class LandscapeView extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 50),
           child: Column(
             children: [
-              // SizedBox(height: 150),
-              // DetailsPart(),
-              // SizedBox(height: 150),
-              // TechStackRow(),
-              // SizedBox(height: 100),
-              // ExperiencePart(),
-              // SizedBox(height: 100),
+              SizedBox(height: 150),
+              DetailsPart(),
+              SizedBox(height: 150),
+              TechStackRow(),
+              SizedBox(height: 100),
+              ExperiencePart(),
+              SizedBox(height: 100),
               ProjectPart(),
             ],
           ),
