@@ -6,7 +6,7 @@ class AppStrings {
   static const String experience = 'Experience';
   static const String contact = 'Contact';
   static const String userName = '{muj.i}';
-  static const String fullName = 'Mujahidul Islam';
+  static const String fullName = 'Mujahedul Islam';
   static const String hiText = 'Hi';
   static const String myNameIsText = 'My name is';
   static const String whatIDoText = 'I build things in Flutter';
