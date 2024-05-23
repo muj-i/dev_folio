@@ -193,7 +193,7 @@ class _LandscapeViewState extends State<LandscapeView> {
                   Text(' & Developed by',
                       style: AppTheme.aBeeZeeTextStyle.copyWith(fontSize: 16)),
                   ShaderMaskWidget(
-                    child: Text(' Mujahidul Islam',
+                    child: Text(' Mujahedul Islam',
                         style:
                             AppTheme.aBeeZeeTextStyle.copyWith(fontSize: 16)),
                   ),
