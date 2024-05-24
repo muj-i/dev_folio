@@ -3,15 +3,16 @@ import 'package:dev_folio/presentation/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class ProjectCard extends StatelessWidget {
-  const ProjectCard({
+class ItemCard extends StatelessWidget {
+  const ItemCard({
     super.key,
-    this.projectImage,
-    this.projectName,
-    this.projectDescription,
+    this.itemImage,
+    this.itemName,
+    this.itemDescription,
     this.techStack,
     this.appStoreLink,
     this.playStoreLink,
+    this.verifyText,
     this.isCompanyProject = false,
     this.onTapAppStore,
     this.onTapPlayStore,
@@ -19,14 +20,16 @@ class ProjectCard extends StatelessWidget {
     this.onTapYoutube,
     this.onTapLinkedin,
     this.onTapAndroid,
+    this.onTapVerifyCertificate,
   });
 
-  final String? projectImage;
-  final String? projectName;
-  final String? projectDescription;
+  final String? itemImage;
+  final String? itemName;
+  final String? itemDescription;
   final String? techStack;
   final String? appStoreLink;
   final String? playStoreLink;
+  final String? verifyText;
   final bool? isCompanyProject;
   final VoidCallback? onTapAppStore;
   final VoidCallback? onTapPlayStore;
@@ -34,6 +37,7 @@ class ProjectCard extends StatelessWidget {
   final VoidCallback? onTapYoutube;
   final VoidCallback? onTapLinkedin;
   final VoidCallback? onTapAndroid;
+  final VoidCallback? onTapVerifyCertificate;
 
   @override
   Widget build(BuildContext context) {
@@ -55,38 +59,42 @@ class ProjectCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          isCompanyProject == false
-              ? ClipRRect(
-                  borderRadius: BorderRadius.circular(16),
-                  child: Image.network(
-                    projectImage ?? '',
-                    fit: BoxFit.fill,
-                  ),
-                )
-              : const SizedBox(),
+          ClipRRect(
+            borderRadius: BorderRadius.circular(16),
+            child: Image.network(
+              itemImage ?? '',
+              fit: BoxFit.fill,
+            ),
+          ),
           const SizedBox(height: 20),
           Text(
-            projectName ?? '',
+            itemName ?? '',
             style: const TextStyle(
               fontSize: 24,
               fontWeight: FontWeight.bold,
             ),
           ),
           const SizedBox(height: 10),
-          Text(
-            projectDescription ?? '',
-            style: const TextStyle(
-              fontSize: 18,
-            ),
-          ),
-          const SizedBox(height: 10),
-          Text(
-            techStack ?? '',
-            style: const TextStyle(
-              fontSize: 14,
-            ),
-          ),
-          const SizedBox(height: 10),
+          itemDescription == null
+              ? const SizedBox()
+              : Text(
+                  itemDescription ?? '',
+                  style: const TextStyle(
+                    fontSize: 18,
+                  ),
+                ),
+          itemDescription == null
+              ? const SizedBox()
+              : const SizedBox(height: 10),
+          techStack == null
+              ? const SizedBox()
+              : Text(
+                  techStack ?? '',
+                  style: const TextStyle(
+                    fontSize: 14,
+                  ),
+                ),
+          techStack == null ? const SizedBox() : const SizedBox(height: 10),
           isCompanyProject == true
               ? Row(
                   children: [
@@ -116,26 +124,57 @@ class ProjectCard extends StatelessWidget {
                 )
               : Row(
                   children: [
-                    const Text(
-                      'Preview',
-                      style: TextStyle(
-                        fontSize: 14,
-                      ),
-                    ),
+                    onTapGithub == null
+                        ? OutlinedButton(
+                            onPressed: onTapVerifyCertificate,
+                            style: OutlinedButton.styleFrom(
+                              side: const BorderSide(
+                                color: AppColors.green,
+                              ),
+                              backgroundColor: AppColors.green.withOpacity(0.1),
+                            ),
+                            child: Row(
+                              children: [
+                                Text(
+                                  verifyText ?? '',
+                                  style: const TextStyle(
+                                    fontSize: 14,
+                                    color: AppColors.green,
+                                  ),
+                                ),
+                                const SizedBox(width: 10),
+                                const Icon(
+                                  FontAwesomeIcons.shield,
+                                  size: 16,
+                                  color: AppColors.green,
+                                ),
+                              ],
+                            ),
+                          )
+                        : const Text(
+                            'Preview',
+                            style: TextStyle(
+                              fontSize: 14,
+                            ),
+                          ),
                     const SizedBox(width: 10),
-                    InkWell(
-                        onTap: onTapGithub,
-                        child: const Icon(
-                          FontAwesomeIcons.github,
-                          size: 20,
-                        )),
+                    onTapGithub == null
+                        ? const SizedBox()
+                        : InkWell(
+                            onTap: onTapGithub,
+                            child: const Icon(
+                              FontAwesomeIcons.github,
+                              size: 20,
+                            )),
                     const SizedBox(width: 10),
-                    InkWell(
-                        onTap: onTapYoutube,
-                        child: const Icon(
-                          FontAwesomeIcons.youtube,
-                          size: 20,
-                        )),
+                    onTapYoutube == null
+                        ? const SizedBox()
+                        : InkWell(
+                            onTap: onTapYoutube,
+                            child: const Icon(
+                              FontAwesomeIcons.youtube,
+                              size: 20,
+                            )),
                     const SizedBox(width: 10),
                     onTapLinkedin == null
                         ? const SizedBox()
