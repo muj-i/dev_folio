@@ -2,7 +2,7 @@ import 'package:dev_folio/presentation/pages/portrait/widgets/seemore_shadow.dar
 import 'package:dev_folio/presentation/utils/app_colors.dart';
 import 'package:dev_folio/presentation/utils/app_theme.dart';
 import 'package:dev_folio/presentation/utils/strtings.dart';
-import 'package:dev_folio/presentation/widgets/project_card.dart';
+import 'package:dev_folio/presentation/widgets/item_card.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -21,6 +21,7 @@ class PortraitExperiencePart extends StatelessWidget {
             AppStrings.workExperienceText,
             style: AppTheme.poppinsTextStyle
                 .copyWith(fontSize: 45, fontWeight: FontWeight.bold),
+            textAlign: TextAlign.center,
           ),
         ),
         const SizedBox(height: 20),
@@ -127,9 +128,11 @@ class PortraitExperiencePart extends StatelessWidget {
         ),
         Stack(
           children: [
-            ProjectCard(
-              projectName: 'Unbolt',
-              projectDescription:
+            ItemCard(
+              itemImage:
+                  'https://raw.githubusercontent.com/muj-i/mocks/main/company_mocs/2.png',
+              itemName: 'Unbolt',
+              itemDescription:
                   'Unbolt is an AI-driven recruitment app in Bangladesh. It offers direct chat-based engagement between job seekers and verified recruiters, ensuring complete privacy protection for both parties.',
               techStack:
                   'Tech stack: Flutter, Firebase, Node.js, MongoDB, Socket.io',
@@ -147,12 +150,12 @@ class PortraitExperiencePart extends StatelessWidget {
               return isShowMoreEnabled.value == true
                   ? const SizedBox()
                   : Positioned(
-                      top: 80,
+                      top: 310,
                       left: 0,
                       right: 0,
                       child: SeeMoreShadow(
-                        buttonTop: 150,
-                        height: 300,
+                        buttonTop: 245,
+                        height: 430,
                         isShowMoreEnabled: isShowMoreEnabled,
                       ));
             }),
@@ -162,9 +165,11 @@ class PortraitExperiencePart extends StatelessWidget {
           return isShowMoreEnabled.value == true
               ? Column(
                   children: [
-                    ProjectCard(
-                      projectName: 'Getfit',
-                      projectDescription:
+                    ItemCard(
+                      itemImage:
+                          'https://raw.githubusercontent.com/muj-i/mocks/main/company_mocs/4.png',
+                      itemName: 'Getfit',
+                      itemDescription:
                           'Getfit is your all-in-one solution for personalized nutrition plans catering to a wide range of needs. Access consultations for expert guidance tailored to user specific goals.',
                       techStack:
                           'Tech stack: Flutter, Firebase, Nest.js, MongoDB, Socket.io, Agora SDK',
@@ -178,9 +183,11 @@ class PortraitExperiencePart extends StatelessWidget {
                       },
                       isCompanyProject: true,
                     ),
-                    ProjectCard(
-                      projectName: 'Getfit Professional',
-                      projectDescription:
+                    ItemCard(
+                      itemImage:
+                          'https://raw.githubusercontent.com/muj-i/mocks/main/company_mocs/5.png',
+                      itemName: 'Getfit Professional',
+                      itemDescription:
                           'Getfit Professional is a the app nutritionists connect with clients and deliver personalized nutrition plans, ensuring effective support for users various health goals.',
                       techStack:
                           'Tech stack: Flutter, Firebase, Nest.js, MongoDB, Socket.io, Agora SDK',
