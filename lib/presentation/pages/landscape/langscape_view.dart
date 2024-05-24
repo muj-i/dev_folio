@@ -40,14 +40,6 @@ class _LandscapeViewState extends State<LandscapeView> {
     super.dispose();
   }
 
-//TODO
-  @override
-  void initState() {
-    Future.delayed(const Duration(milliseconds: 500))
-        .then((value) => scrollToSection(_sectionProfessionalTraingKey));
-    super.initState();
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
