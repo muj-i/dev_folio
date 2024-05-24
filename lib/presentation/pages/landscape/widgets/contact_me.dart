@@ -24,7 +24,7 @@ class ContactMe extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 10),
           child: Row(
             children: [
-              Text(AppStrings.userName,
+              Text(AppStrings.fullName,
                   style: AppTheme.aBeeZeeTextStyle.copyWith(
                       fontWeight: FontWeight.bold,
                       wordSpacing: 5.0,

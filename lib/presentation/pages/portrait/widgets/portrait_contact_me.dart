@@ -20,7 +20,7 @@ class PortraitContactMe extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 20),
-        Text(AppStrings.userName,
+        Text(AppStrings.fullName,
             style: AppTheme.aBeeZeeTextStyle.copyWith(
                 fontWeight: FontWeight.bold, wordSpacing: 5.0, fontSize: 22)),
         const SizedBox(height: 10),
