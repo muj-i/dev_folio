@@ -1,11 +1,12 @@
-import 'package:dev_folio/presentation/widgets/about_me.dart';
 import 'package:dev_folio/presentation/pages/landscape/widgets/contact_me.dart';
 import 'package:dev_folio/presentation/pages/landscape/widgets/details_part.dart';
 import 'package:dev_folio/presentation/pages/landscape/widgets/experience_part.dart';
+import 'package:dev_folio/presentation/pages/landscape/widgets/professional_traings.dart';
 import 'package:dev_folio/presentation/pages/landscape/widgets/projects_part.dart';
 import 'package:dev_folio/presentation/pages/landscape/widgets/tech_stack_row.dart';
 import 'package:dev_folio/presentation/utils/app_theme.dart';
 import 'package:dev_folio/presentation/utils/strtings.dart';
+import 'package:dev_folio/presentation/widgets/about_me.dart';
 import 'package:dev_folio/presentation/widgets/shader_mas_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -24,6 +25,7 @@ class _LandscapeViewState extends State<LandscapeView> {
   final GlobalKey _sectionTechStackRowKey = GlobalKey();
   final GlobalKey _sectionExperienceKey = GlobalKey();
   final GlobalKey _sectionProjectsKey = GlobalKey();
+  final GlobalKey _sectionProfessionalTraingKey = GlobalKey();
   final GlobalKey _sectionAbouttMeKey = GlobalKey();
   final GlobalKey _sectionContactMeKey = GlobalKey();
 
@@ -36,6 +38,14 @@ class _LandscapeViewState extends State<LandscapeView> {
   void dispose() {
     _scrollController.dispose();
     super.dispose();
+  }
+
+//TODO
+  @override
+  void initState() {
+    Future.delayed(const Duration(milliseconds: 500))
+        .then((value) => scrollToSection(_sectionProfessionalTraingKey));
+    super.initState();
   }
 
   @override
@@ -75,6 +85,11 @@ class _LandscapeViewState extends State<LandscapeView> {
               ),
               const SizedBox(height: 100),
               Container(
+                key: _sectionProfessionalTraingKey,
+                child: const ProfessionalTraing(),
+              ),
+              const SizedBox(height: 100),
+              Container(
                 key: _sectionAbouttMeKey,
                 child: const AboutMe(),
               ),
@@ -95,74 +110,19 @@ class _LandscapeViewState extends State<LandscapeView> {
 
   AppBar appBar() {
     return AppBar(
-          title: const ShaderMaskWidget(
-            child: Text(AppStrings.userName,
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  wordSpacing: 5.0,
-                )),
-          ),
-          actions: [
-            TextButton(
-                onPressed: () {
-                  scrollToSection(_sectionDetailPartKey);
-                },
-                child: const Text(AppStrings.home)),
-            TextButton(
-                onPressed: () {
-                  scrollToSection(_sectionAbouttMeKey);
-                },
-                child: const Text(AppStrings.about)),
-            TextButton(
-                onPressed: () {
-                  scrollToSection(_sectionTechStackRowKey);
-                },
-                child: const Text(AppStrings.techStack)),
-            TextButton(
-                onPressed: () {
-                  scrollToSection(_sectionExperienceKey);
-                },
-                child: const Text(AppStrings.experience)),
-            TextButton(
-                onPressed: () {
-                  scrollToSection(_sectionProjectsKey);
-                },
-                child: const Text(AppStrings.projects)),
-            TextButton(
-                onPressed: () {
-                  scrollToSection(_sectionContactMeKey);
-                },
-                child: const Text(AppStrings.contact)),
-            const SizedBox(width: 10),
-            IconButton(
-                onPressed: () async {
-                  await launchUrl(Uri.parse('https://github.com/muj-i'));
-                },
-                icon: const Icon(FontAwesomeIcons.squareGithub)),
-            const SizedBox(width: 2),
-            IconButton(
-                onPressed: () async {
-                  await launchUrl(
-                      Uri.parse('https://www.linkedin.com/in/muj-i/'));
-                },
-                icon: const Icon(FontAwesomeIcons.linkedin)),
-          ],
-        );
-  }
-
-  Row bottomButtonPortion(BuildContext context) {
-    return Row(
-      children: [
+      title: const ShaderMaskWidget(
+        child: Text(AppStrings.userName,
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              wordSpacing: 5.0,
+            )),
+      ),
+      actions: [
         TextButton(
             onPressed: () {
               scrollToSection(_sectionDetailPartKey);
             },
             child: const Text(AppStrings.home)),
-        TextButton(
-            onPressed: () {
-              scrollToSection(_sectionAbouttMeKey);
-            },
-            child: const Text(AppStrings.about)),
         TextButton(
             onPressed: () {
               scrollToSection(_sectionTechStackRowKey);
@@ -178,6 +138,70 @@ class _LandscapeViewState extends State<LandscapeView> {
               scrollToSection(_sectionProjectsKey);
             },
             child: const Text(AppStrings.projects)),
+        TextButton(
+            onPressed: () {
+              scrollToSection(_sectionAbouttMeKey);
+            },
+            child: const Text(AppStrings.about)),
+        TextButton(
+            onPressed: () {
+              scrollToSection(_sectionProfessionalTraingKey);
+            },
+            child: const Text(AppStrings.professionalTraining)),
+        TextButton(
+            onPressed: () {
+              scrollToSection(_sectionContactMeKey);
+            },
+            child: const Text(AppStrings.contact)),
+        const SizedBox(width: 10),
+        IconButton(
+            onPressed: () async {
+              await launchUrl(Uri.parse('https://github.com/muj-i'));
+            },
+            icon: const Icon(FontAwesomeIcons.squareGithub)),
+        const SizedBox(width: 2),
+        IconButton(
+            onPressed: () async {
+              await launchUrl(Uri.parse('https://www.linkedin.com/in/muj-i/'));
+            },
+            icon: const Icon(FontAwesomeIcons.linkedin)),
+      ],
+    );
+  }
+
+  Row bottomButtonPortion(BuildContext context) {
+    return Row(
+      children: [
+        TextButton(
+            onPressed: () {
+              scrollToSection(_sectionDetailPartKey);
+            },
+            child: const Text(AppStrings.home)),
+        TextButton(
+            onPressed: () {
+              scrollToSection(_sectionTechStackRowKey);
+            },
+            child: const Text(AppStrings.techStack)),
+        TextButton(
+            onPressed: () {
+              scrollToSection(_sectionExperienceKey);
+            },
+            child: const Text(AppStrings.experience)),
+        TextButton(
+            onPressed: () {
+              scrollToSection(_sectionProjectsKey);
+            },
+            child: const Text(AppStrings.projects)),
+        TextButton(
+            onPressed: () {
+              scrollToSection(_sectionProfessionalTraingKey);
+            },
+            child: const Text(AppStrings.professionalTraining)),
+        TextButton(
+            onPressed: () {
+              scrollToSection(_sectionAbouttMeKey);
+            },
+            child: const Text(AppStrings.about)),
         TextButton(
             onPressed: () {
               scrollToSection(_sectionContactMeKey);

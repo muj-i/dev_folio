@@ -1,3 +1,4 @@
+import 'package:dev_folio/presentation/pages/portrait/widgets/portait_professional_traings.dart';
 import 'package:dev_folio/presentation/pages/portrait/widgets/portrait_contact_me.dart';
 import 'package:dev_folio/presentation/pages/portrait/widgets/portrait_details_part.dart';
 import 'package:dev_folio/presentation/pages/portrait/widgets/portrait_experience_part.dart';
@@ -24,6 +25,7 @@ class _PortraitViewState extends State<PortraitView> {
   final GlobalKey _sectionTechStackRowKey = GlobalKey();
   final GlobalKey _sectionExperienceKey = GlobalKey();
   final GlobalKey _sectionProjectsKey = GlobalKey();
+  final GlobalKey _sectionProfessionalTraingKey = GlobalKey();
   final GlobalKey _sectionAbouttMeKey = GlobalKey();
   final GlobalKey _sectionContactMeKey = GlobalKey();
 
@@ -71,6 +73,11 @@ class _PortraitViewState extends State<PortraitView> {
               Container(
                 key: _sectionProjectsKey,
                 child: const PortraitProjectsPart(),
+              ),
+              const SizedBox(height: 100),
+              Container(
+                key: _sectionProfessionalTraingKey,
+                child: const PortraitProfessionalTraing(),
               ),
               const SizedBox(height: 100),
               Container(
@@ -122,22 +129,6 @@ class _PortraitViewState extends State<PortraitView> {
                 children: [
                   Padding(
                     padding: EdgeInsets.only(bottom: 2),
-                    child: Icon(FontAwesomeIcons.solidUser, size: 18),
-                  ),
-                  SizedBox(width: 10),
-                  Text(AppStrings.about, style: TextStyle(fontSize: 18)),
-                ],
-              ),
-              onTap: () {
-                scrollToSection(_sectionAbouttMeKey);
-              },
-            ),
-            ListTile(
-              title: const Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Padding(
-                    padding: EdgeInsets.only(bottom: 2),
                     child: Icon(FontAwesomeIcons.code, size: 18),
                   ),
                   SizedBox(width: 10),
@@ -178,6 +169,39 @@ class _PortraitViewState extends State<PortraitView> {
               ),
               onTap: () {
                 scrollToSection(_sectionProjectsKey);
+              },
+            ),
+            ListTile(
+              title: const Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(bottom: 0),
+                    child: Icon(FontAwesomeIcons.chalkboardUser, size: 18),
+                  ),
+                  SizedBox(width: 10),
+                  Text(AppStrings.professionalTraining,
+                      style: TextStyle(fontSize: 18)),
+                ],
+              ),
+              onTap: () {
+                scrollToSection(_sectionProfessionalTraingKey);
+              },
+            ),
+            ListTile(
+              title: const Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(bottom: 2),
+                    child: Icon(FontAwesomeIcons.solidUser, size: 18),
+                  ),
+                  SizedBox(width: 10),
+                  Text(AppStrings.about, style: TextStyle(fontSize: 18)),
+                ],
+              ),
+              onTap: () {
+                scrollToSection(_sectionAbouttMeKey);
               },
             ),
             ListTile(

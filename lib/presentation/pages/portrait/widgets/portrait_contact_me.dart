@@ -16,6 +16,7 @@ class PortraitContactMe extends StatelessWidget {
             AppStrings.contactMeText,
             style: AppTheme.poppinsTextStyle
                 .copyWith(fontSize: 45, fontWeight: FontWeight.bold),
+            textAlign: TextAlign.center,
           ),
         ),
         const SizedBox(height: 20),

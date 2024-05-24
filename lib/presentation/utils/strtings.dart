@@ -5,6 +5,7 @@ class AppStrings {
   static const String projects = 'Projects';
   static const String experience = 'Experience';
   static const String contact = 'Contact';
+  static const String professionalTraining = 'Trainings';
   static const String userName = '{muj.i}';
   static const String fullName = 'Mujahedul Islam';
   static const String hiText = 'Hi';

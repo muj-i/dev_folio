@@ -1,6 +1,6 @@
 import 'package:dev_folio/presentation/utils/app_theme.dart';
 import 'package:dev_folio/presentation/utils/strtings.dart';
-import 'package:dev_folio/presentation/widgets/project_card.dart';
+import 'package:dev_folio/presentation/widgets/item_card.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -25,11 +25,11 @@ class ProjectsPart extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Expanded(
-              child: ProjectCard(
-                projectImage:
+              child: ItemCard(
+                itemImage:
                     'https://raw.githubusercontent.com/muj-i/mocks/main/crafty_bay.png',
-                projectName: 'CraftyBay',
-                projectDescription:
+                itemName: 'CraftyBay',
+                itemDescription:
                     'CraftyBay is a feature-rich ecommerce app designed to provide users with a seamless and enjoyable shopping experience. With a focus on user-friendliness and a wide range of products, CraftyBay allows users to explore, purchase, and review products with ease.',
                 techStack: 'Tech stack: Flutter, Laravel, MySQL',
                 onTapGithub: () async {
@@ -47,11 +47,11 @@ class ProjectsPart extends StatelessWidget {
               ),
             ),
             Expanded(
-              child: ProjectCard(
-                projectImage:
+              child: ItemCard(
+                itemImage:
                     'https://raw.githubusercontent.com/muj-i/mocks/main/ProgressPal.png',
-                projectName: 'ProgressPal',
-                projectDescription:
+                itemName: 'ProgressPal',
+                itemDescription:
                     'Elevate your productivity with Progress Pal, a meticulously crafted task manager application designed to streamline your journey towards achieving your goals. With its sleek design and intuitive user interface, Progress Pal redefines task management, making it an indispensable companion for both personal and professional endeavors.',
                 techStack: 'Tech stack: Flutter, Laravel, MongoDB',
                 onTapGithub: () async {
@@ -73,11 +73,11 @@ class ProjectsPart extends StatelessWidget {
               ),
             ),
             Expanded(
-              child: ProjectCard(
-                projectImage:
+              child: ItemCard(
+                itemImage:
                     'https://raw.githubusercontent.com/muj-i/mocks/main/WEATHER.png',
-                projectName: 'W E A T H E R !',
-                projectDescription:
+                itemName: 'W E A T H E R !',
+                itemDescription:
                     'W E A T H E R ! is a simple and intuitive application that allows users to check the current weather conditions for different locations. With a clean and visually appealing interface, users can easily enter a location and get real-time weather information.',
                 techStack: 'Tech stack: Flutter, OpenWeatherMap API',
                 onTapGithub: () async {

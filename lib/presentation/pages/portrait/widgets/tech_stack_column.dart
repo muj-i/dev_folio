@@ -28,6 +28,7 @@ class TechStackColumn extends StatelessWidget {
           AppStrings.myTechStackText,
           style: AppTheme.poppinsTextStyle
               .copyWith(fontSize: 45, fontWeight: FontWeight.bold),
+          textAlign: TextAlign.center,
         ),
         ShaderMaskWidget(
           child: Text(
