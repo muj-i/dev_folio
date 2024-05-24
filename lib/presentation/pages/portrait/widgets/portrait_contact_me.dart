@@ -22,7 +22,7 @@ class PortraitContactMe extends StatelessWidget {
         const SizedBox(height: 20),
         Text(AppStrings.fullName,
             style: AppTheme.aBeeZeeTextStyle.copyWith(
-                fontWeight: FontWeight.bold, wordSpacing: 5.0, fontSize: 22)),
+                fontWeight: FontWeight.bold, wordSpacing: 5.0, fontSize: 20)),
         const SizedBox(height: 10),
         TextButton(
           onPressed: () async {

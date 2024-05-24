@@ -28,14 +28,14 @@ class ContactMe extends StatelessWidget {
                   style: AppTheme.aBeeZeeTextStyle.copyWith(
                       fontWeight: FontWeight.bold,
                       wordSpacing: 5.0,
-                      fontSize: 22)),
+                      fontSize: 18)),
               const Spacer(),
               TextButton(
                 onPressed: () async {
                   await launchUrl(Uri.parse('tel:+8801875896897'));
                 },
                 child: Text('+880 18 7589 6897',
-                    style: AppTheme.aBeeZeeTextStyle.copyWith(fontSize: 16)),
+                    style: AppTheme.aBeeZeeTextStyle.copyWith(fontSize: 18)),
               ),
               TextButton(
                 onPressed: () async {
@@ -43,7 +43,7 @@ class ContactMe extends StatelessWidget {
                 },
                 child: Text('dev.muj.i@icloud.com',
                     style: AppTheme.aBeeZeeTextStyle
-                        .copyWith(wordSpacing: 5.0, fontSize: 16)),
+                        .copyWith(wordSpacing: 5.0, fontSize: 18)),
               ),
               const SizedBox(width: 30),
               IconButton(
