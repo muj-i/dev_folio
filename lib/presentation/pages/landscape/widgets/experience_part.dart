@@ -56,26 +56,26 @@ class ExperiencePart extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'June 2023 - May 2024',
+                  'June 2023 - Present',
                   style: AppTheme.poppinsTextStyle.copyWith(
                     fontSize: 18,
                     color: AppColors.black,
                   ),
                 ),
-                InkWell(
-                  onTap: () async {
-                    await launchUrl(Uri.parse(
-                        'https://www.icloud.com/iclouddrive/09cUao7OHItu4-OVeimpdsMzA#Experience_Letter'));
-                  },
-                  child: Text(
-                    'Letter of Experience.',
-                    style: AppTheme.poppinsTextStyle.copyWith(
-                        fontSize: 18,
-                        color: AppColors.blue,
-                        decoration: TextDecoration.underline,
-                        decorationColor: AppColors.blue),
-                  ),
-                ),
+                // InkWell(
+                //   onTap: () async {
+                //     await launchUrl(Uri.parse(
+                //         'https://www.icloud.com/iclouddrive/09cUao7OHItu4-OVeimpdsMzA#Experience_Letter'));
+                //   },
+                //   child: Text(
+                //     'Letter of Experience.',
+                //     style: AppTheme.poppinsTextStyle.copyWith(
+                //         fontSize: 18,
+                //         color: AppColors.blue,
+                //         decoration: TextDecoration.underline,
+                //         decorationColor: AppColors.blue),
+                //   ),
+                // ),
               ],
             )
           ],

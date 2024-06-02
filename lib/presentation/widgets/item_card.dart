@@ -175,7 +175,9 @@ class ItemCard extends StatelessWidget {
                               FontAwesomeIcons.youtube,
                               size: 20,
                             )),
-                    const SizedBox(width: 10),
+                    onTapLinkedin == null
+                        ? const SizedBox()
+                        : const SizedBox(width: 10),
                     onTapLinkedin == null
                         ? const SizedBox()
                         : InkWell(
