@@ -68,6 +68,19 @@ class PortraitExperiencePart extends StatelessWidget {
         //         decorationColor: AppColors.blue),
         //   ),
         // ),
+        InkWell(
+          onTap: () async {
+            await launchUrl(Uri.parse('https://getfit.com.bd/'));
+          },
+          child: Text(
+            'Visit Website.',
+            style: AppTheme.poppinsTextStyle.copyWith(
+                fontSize: 18,
+                color: AppColors.blue,
+                decoration: TextDecoration.underline,
+                decorationColor: AppColors.blue),
+          ),
+        ),
         const SizedBox(height: 20),
         Text(
           'Responsibilities:',
