@@ -37,7 +37,7 @@ class AboutMe extends StatelessWidget {
           ),
           onPressed: () async {
             await launchUrl(Uri.parse(
-                'https://www.icloud.com/iclouddrive/0814BLLEp4QBLrop_iaTRWyAQ#Mujahedul_Islam_-_resume'));
+                'https://github.com/muj-i/muj-i/blob/main/Mujahedul_Islam%20-%20resume.pdf'));
           },
           child: const Row(
             mainAxisSize: MainAxisSize.min,
