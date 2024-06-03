@@ -68,7 +68,13 @@ class _LandscapeViewState extends State<LandscapeView> {
               const SizedBox(height: 100),
               Container(
                 key: _sectionExperienceKey,
-                child: const ExperiencePart(),
+                child: const Column(
+                  children: [
+                    ExperiencePart1(),
+                    SizedBox(height: 20),
+                    ExperiencePart2(),
+                  ],
+                ),
               ),
               const SizedBox(height: 100),
               Container(

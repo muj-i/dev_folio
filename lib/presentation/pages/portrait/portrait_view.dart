@@ -67,7 +67,13 @@ class _PortraitViewState extends State<PortraitView> {
               const SizedBox(height: 100),
               Container(
                 key: _sectionExperienceKey,
-                child: const PortraitExperiencePart(),
+                child: const Column(
+                  children: [
+                    PortraitExperiencePart1(),
+                    SizedBox(height: 20),
+                    PortraitExperiencePart2(),
+                  ],
+                ),
               ),
               const SizedBox(height: 100),
               Container(
