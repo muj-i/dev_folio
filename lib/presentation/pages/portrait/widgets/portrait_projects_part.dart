@@ -50,7 +50,7 @@ class PortraitProjectsPart extends StatelessWidget {
               return isShowMoreEnabled.value == true
                   ? const SizedBox()
                   : Positioned(
-                      top: 300,
+                      top: 250,
                       left: 0,
                       right: 0,
                       child: SeeMoreShadow(

@@ -178,7 +178,7 @@ class PortraitExperiencePart1 extends StatelessWidget {
                     return isShowMoreEnabled.value == true
                         ? const SizedBox()
                         : Positioned(
-                            top: 310,
+                            top: 260,
                             left: 0,
                             right: 0,
                             child: SeeMoreShadow(
