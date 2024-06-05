@@ -27,6 +27,28 @@ class ProjectsPart extends StatelessWidget {
             Expanded(
               child: ItemCard(
                 itemImage:
+                    'https://raw.githubusercontent.com/muj-i/mocks/main/ask_gemini.png',
+                itemName: 'AskGemini',
+                itemDescription:
+                    'An interactive application utilizing the Gemini API to provide answers to user queries through chat or image inputs. It offers robust solutions for text-based questions and image descriptions, ensuring information is accessible and user-friendly.',
+                techStack: 'Tech stack: Flutter, Gemini API',
+                onTapGithub: () async {
+                  await launchUrl(
+                      Uri.parse('https://github.com/muj-i/ask_gemini'));
+                },
+                onTapLinkedin: () async {
+                  await launchUrl(Uri.parse(
+                      'https://www.linkedin.com/posts/muj-i_just-created-a-new-app-called-askgemini-activity-7203906546500579328-_4ey/'));
+                },
+                onTapAndroid: () async {
+                  await launchUrl(Uri.parse(
+                      'https://github.com/muj-i/ask_gemini/releases/download/v1.0.0/ask_gemini.apk'));
+                },
+              ),
+            ),
+            Expanded(
+              child: ItemCard(
+                itemImage:
                     'https://raw.githubusercontent.com/muj-i/mocks/main/crafty_bay.png',
                 itemName: 'CraftyBay',
                 itemDescription:
@@ -49,8 +71,33 @@ class ProjectsPart extends StatelessWidget {
             Expanded(
               child: ItemCard(
                 itemImage:
+                    'https://raw.githubusercontent.com/muj-i/mocks/main/WEATHER.png',
+                itemName: 'W E A T H E R !',
+                itemDescription:
+                    'W E A T H E R ! is a simple and intuitive application that allows users to check the current weather conditions for different locations. With a clean and visually appealing interface, users can easily enter a location and get real-time weather information.',
+                techStack: 'Tech stack: Flutter, OpenWeatherMap API',
+                onTapGithub: () async {
+                  await launchUrl(Uri.parse(
+                      'https://github.com/muj-i/Flutter-Practice/tree/main/Assignments/mod9asgmt'));
+                },
+                onTapYoutube: () async {
+                  await launchUrl(Uri.parse(
+                      'https://youtu.be/fBMRxnt_rAo?si=7hNcDXnTsAdKOCPf'));
+                },
+              ),
+            ),
+          ],
+        ),
+        const SizedBox(height: 15),
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Expanded(
+              child: ItemCard(
+                itemImage:
                     'https://raw.githubusercontent.com/muj-i/mocks/main/ProgressPal.png',
-                itemName: 'ProgressPal',
+                itemName: 'Progress Pal',
                 itemDescription:
                     'Elevate your productivity with Progress Pal, a meticulously crafted task manager application designed to streamline your journey towards achieving your goals. With its sleek design and intuitive user interface, Progress Pal redefines task management, making it an indispensable companion for both personal and professional endeavors.',
                 techStack: 'Tech stack: Flutter, Laravel, MongoDB',
@@ -73,21 +120,17 @@ class ProjectsPart extends StatelessWidget {
               ),
             ),
             Expanded(
-              child: ItemCard(
-                itemImage:
-                    'https://raw.githubusercontent.com/muj-i/mocks/main/WEATHER.png',
-                itemName: 'W E A T H E R !',
-                itemDescription:
-                    'W E A T H E R ! is a simple and intuitive application that allows users to check the current weather conditions for different locations. With a clean and visually appealing interface, users can easily enter a location and get real-time weather information.',
-                techStack: 'Tech stack: Flutter, OpenWeatherMap API',
-                onTapGithub: () async {
-                  await launchUrl(Uri.parse(
-                      'https://github.com/muj-i/Flutter-Practice/tree/main/Assignments/mod9asgmt'));
-                },
-                onTapYoutube: () async {
-                  await launchUrl(Uri.parse(
-                      'https://youtu.be/fBMRxnt_rAo?si=7hNcDXnTsAdKOCPf'));
-                },
+              child: Container(
+                height: 300,
+                width: 300,
+                color: Colors.white,
+              ),
+            ),
+            Expanded(
+              child: Container(
+                height: 300,
+                width: 300,
+                color: Colors.white,
               ),
             )
           ],
