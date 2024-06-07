@@ -7,7 +7,7 @@ import 'package:dev_folio/presentation/pages/landscape/widgets/tech_stack_row.da
 import 'package:dev_folio/presentation/utils/app_theme.dart';
 import 'package:dev_folio/presentation/utils/strtings.dart';
 import 'package:dev_folio/presentation/widgets/about_me.dart';
-import 'package:dev_folio/presentation/widgets/shader_mas_widget.dart';
+import 'package:dev_folio/presentation/widgets/shader_mask_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';

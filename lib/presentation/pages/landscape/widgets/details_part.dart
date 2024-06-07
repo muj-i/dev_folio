@@ -2,7 +2,7 @@ import 'package:dev_folio/presentation/utils/app_assets.dart';
 import 'package:dev_folio/presentation/utils/app_colors.dart';
 import 'package:dev_folio/presentation/utils/app_theme.dart';
 import 'package:dev_folio/presentation/utils/strtings.dart';
-import 'package:dev_folio/presentation/widgets/shader_mas_widget.dart';
+import 'package:dev_folio/presentation/widgets/shader_mask_widget.dart';
 import 'package:flutter/material.dart';
 
 class DetailsPart extends StatelessWidget {
@@ -59,7 +59,7 @@ class DetailsPart extends StatelessWidget {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(500),
                 gradient: const LinearGradient(
-                  colors: [AppColors.pink, AppColors.blue],
+                  colors: [AppColors.yellow, Colors.red],
                   begin: Alignment.topCenter,
                   end: Alignment.centerRight,
                   tileMode: TileMode.clamp,

@@ -1,7 +1,7 @@
 import 'package:dev_folio/presentation/models/tech_stack_items.dart';
 import 'package:dev_folio/presentation/utils/app_theme.dart';
 import 'package:dev_folio/presentation/utils/strtings.dart';
-import 'package:dev_folio/presentation/widgets/shader_mas_widget.dart';
+import 'package:dev_folio/presentation/widgets/shader_mask_widget.dart';
 import 'package:dev_folio/presentation/widgets/tech_stack_grid.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';

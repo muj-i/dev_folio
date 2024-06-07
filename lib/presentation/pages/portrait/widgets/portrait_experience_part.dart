@@ -29,8 +29,8 @@ class PortraitExperiencePart1 extends StatelessWidget {
           decoration: BoxDecoration(
             gradient: LinearGradient(
               colors: [
-                AppColors.pink.withOpacity(.05),
-                AppColors.blue.withOpacity(.4)
+                AppColors.yellow.withOpacity(.05),
+                AppColors.red.withOpacity(.4)
               ],
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
@@ -257,8 +257,8 @@ class PortraitExperiencePart2 extends StatelessWidget {
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: [
-            AppColors.pink.withOpacity(.05),
-            AppColors.blue.withOpacity(.4)
+            AppColors.yellow.withOpacity(.05),
+            AppColors.red.withOpacity(.4)
           ],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,

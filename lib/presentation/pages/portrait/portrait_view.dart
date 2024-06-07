@@ -4,9 +4,10 @@ import 'package:dev_folio/presentation/pages/portrait/widgets/portrait_details_p
 import 'package:dev_folio/presentation/pages/portrait/widgets/portrait_experience_part.dart';
 import 'package:dev_folio/presentation/pages/portrait/widgets/portrait_projects_part.dart';
 import 'package:dev_folio/presentation/pages/portrait/widgets/tech_stack_column.dart';
+import 'package:dev_folio/presentation/utils/app_assets.dart';
 import 'package:dev_folio/presentation/utils/strtings.dart';
 import 'package:dev_folio/presentation/widgets/about_me.dart';
-import 'package:dev_folio/presentation/widgets/shader_mas_widget.dart';
+import 'package:dev_folio/presentation/widgets/shader_mask_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
@@ -112,6 +113,16 @@ class _PortraitViewState extends State<PortraitView> {
       child: SingleChildScrollView(
         child: Column(
           children: [
+            const SizedBox(height: 20),
+            Image.asset(AppAssets.me4Img, height: 90),
+            const SizedBox(height: 10),
+            const ShaderMaskWidget(
+              child: Text(AppStrings.userName,
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      wordSpacing: 5.0,
+                      fontSize: 23)),
+            ),
             const SizedBox(height: 20),
             ListTile(
               title: const Row(
