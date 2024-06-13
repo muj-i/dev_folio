@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:dev_folio/presentation/pages/portrait/widgets/portait_professional_traings.dart';
 import 'package:dev_folio/presentation/pages/portrait/widgets/portrait_contact_me.dart';
 import 'package:dev_folio/presentation/pages/portrait/widgets/portrait_details_part.dart';
@@ -5,6 +6,7 @@ import 'package:dev_folio/presentation/pages/portrait/widgets/portrait_experienc
 import 'package:dev_folio/presentation/pages/portrait/widgets/portrait_projects_part.dart';
 import 'package:dev_folio/presentation/pages/portrait/widgets/tech_stack_column.dart';
 import 'package:dev_folio/presentation/utils/app_assets.dart';
+import 'package:dev_folio/presentation/utils/app_colors.dart';
 import 'package:dev_folio/presentation/utils/strtings.dart';
 import 'package:dev_folio/presentation/widgets/about_me.dart';
 import 'package:dev_folio/presentation/widgets/shader_mask_widget.dart';
@@ -114,7 +116,19 @@ class _PortraitViewState extends State<PortraitView> {
         child: Column(
           children: [
             const SizedBox(height: 20),
-            Image.asset(AppAssets.me4Img, height: 90),
+            CachedNetworkImage(
+              imageUrl: AppAssets.me4Img,
+              height: 90,
+              width: 90,
+              fit: BoxFit.fitHeight,
+              placeholder: (context, url) => CircularProgressIndicator(
+                valueColor: AlwaysStoppedAnimation<Color>(
+                    AppColors.black.withOpacity(.4)),
+              ),
+              errorWidget: (context, url, error) =>
+                  Image.asset(AppAssets.meImg),
+            ),
+            // Image.asset(AppAssets.me4Img, height: 90),
             const SizedBox(height: 10),
             const ShaderMaskWidget(
               child: Text(AppStrings.userName,

@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:dev_folio/presentation/utils/app_assets.dart';
 import 'package:dev_folio/presentation/utils/app_colors.dart';
 import 'package:flutter/material.dart';
@@ -6,7 +7,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 class ItemCard extends StatelessWidget {
   const ItemCard({
     super.key,
-    this.itemImage,
+    required this.itemImage,
     this.itemName,
     this.itemDescription,
     this.techStack,
@@ -23,7 +24,7 @@ class ItemCard extends StatelessWidget {
     this.onTapVerifyCertificate,
   });
 
-  final String? itemImage;
+  final String itemImage;
   final String? itemName;
   final String? itemDescription;
   final String? techStack;
@@ -61,10 +62,20 @@ class ItemCard extends StatelessWidget {
         children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(16),
-            child: Image.network(
-              itemImage ?? '',
+            child: CachedNetworkImage(
+              imageUrl: itemImage,
               fit: BoxFit.fill,
+              progressIndicatorBuilder: (context, url, downloadProgress) =>
+                  CircularProgressIndicator(
+                      color: AppColors.black.withOpacity(.4),
+                      value: downloadProgress.progress),
+              errorWidget: (context, url, error) => Image.network(
+                  'https://ih1.redbubble.net/image.485923661.1240/st,small,507x507-pad,600x600,f8f8f8.u1.jpg'),
             ),
+            // Image.network(
+            //   itemImage ?? '',
+            //   fit: BoxFit.fill,
+            // ),
           ),
           const SizedBox(height: 20),
           Text(

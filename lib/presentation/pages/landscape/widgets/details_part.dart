@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:dev_folio/presentation/utils/app_assets.dart';
 import 'package:dev_folio/presentation/utils/app_colors.dart';
 import 'package:dev_folio/presentation/utils/app_theme.dart';
@@ -69,9 +70,17 @@ class DetailsPart extends StatelessWidget {
                 padding: const EdgeInsets.all(8.0),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(500),
-                  child: Image.asset(
-                    AppAssets.meImg,
+                  child: CachedNetworkImage(
+                    imageUrl: AppAssets.meImg,
                     height: 350,
+                    width: 350,
+                    fit: BoxFit.fitHeight,
+                    placeholder: (context, url) => CircularProgressIndicator(
+                      valueColor: AlwaysStoppedAnimation<Color>(
+                          AppColors.black.withOpacity(.4)),
+                    ),
+                    errorWidget: (context, url, error) =>
+                        Image.asset(AppAssets.meImg),
                   ),
                 ),
               ),
