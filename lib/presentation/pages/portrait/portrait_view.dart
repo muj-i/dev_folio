@@ -117,7 +117,7 @@ class _PortraitViewState extends State<PortraitView> {
           children: [
             const SizedBox(height: 20),
             CachedNetworkImage(
-              imageUrl: AppAssets.me4Img,
+              imageUrl: AppAssets.meImg,
               height: 90,
               width: 90,
               fit: BoxFit.fitHeight,
