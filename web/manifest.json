@@ -1,6 +1,6 @@
 {
-    "name": "dev_folio",
-    "short_name": "dev_folio",
+    "name": "Muj's Portfolio",
+    "short_name": "Muj's Portfolio",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
