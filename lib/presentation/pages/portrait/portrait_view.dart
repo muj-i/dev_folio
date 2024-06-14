@@ -116,17 +116,31 @@ class _PortraitViewState extends State<PortraitView> {
         child: Column(
           children: [
             const SizedBox(height: 20),
-            CachedNetworkImage(
-              imageUrl: AppAssets.meImg,
-              height: 90,
-              width: 90,
-              fit: BoxFit.fitHeight,
-              placeholder: (context, url) => CircularProgressIndicator(
-                valueColor: AlwaysStoppedAnimation<Color>(
-                    AppColors.black.withOpacity(.4)),
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(500),
+                gradient: const LinearGradient(
+                  colors: [AppColors.yellow, AppColors.red],
+                  begin: Alignment.topCenter,
+                  end: Alignment.centerRight,
+                  tileMode: TileMode.clamp,
+                ),
               ),
-              errorWidget: (context, url, error) =>
-                  Image.asset(AppAssets.meImg),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(500),
+                child: CachedNetworkImage(
+                  imageUrl: AppAssets.me6Img,
+                  height: 90,
+                  width: 90,
+                  fit: BoxFit.cover,
+                  placeholder: (context, url) => CircularProgressIndicator(
+                    valueColor: AlwaysStoppedAnimation<Color>(
+                        AppColors.black.withOpacity(.4)),
+                  ),
+                  errorWidget: (context, url, error) =>
+                      Image.asset(AppAssets.me4Img),
+                ),
+              ),
             ),
             // Image.asset(AppAssets.me4Img, height: 90),
             const SizedBox(height: 10),

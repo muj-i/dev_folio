@@ -60,28 +60,25 @@ class DetailsPart extends StatelessWidget {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(500),
                 gradient: const LinearGradient(
-                  colors: [AppColors.yellow, Colors.red],
+                  colors: [AppColors.yellow, AppColors.red],
                   begin: Alignment.topCenter,
                   end: Alignment.centerRight,
                   tileMode: TileMode.clamp,
                 ),
               ),
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(500),
-                  child: CachedNetworkImage(
-                    imageUrl: AppAssets.meImg,
-                    height: 350,
-                    width: 350,
-                    fit: BoxFit.fitHeight,
-                    placeholder: (context, url) => CircularProgressIndicator(
-                      valueColor: AlwaysStoppedAnimation<Color>(
-                          AppColors.black.withOpacity(.4)),
-                    ),
-                    errorWidget: (context, url, error) =>
-                        Image.asset(AppAssets.meImg),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(500),
+                child: CachedNetworkImage(
+                  imageUrl: AppAssets.me6Img,
+                  height: 350,
+                  width: 350,
+                  fit: BoxFit.cover,
+                  placeholder: (context, url) => CircularProgressIndicator(
+                    valueColor: AlwaysStoppedAnimation<Color>(
+                        AppColors.black.withOpacity(.4)),
                   ),
+                  errorWidget: (context, url, error) =>
+                      Image.asset(AppAssets.me6Img),
                 ),
               ),
             ),
