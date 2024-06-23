@@ -120,7 +120,7 @@ class _PortraitViewState extends State<PortraitView> {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(500),
                 gradient: const LinearGradient(
-                  colors: [AppColors.yellow, AppColors.red],
+                  colors: [AppColors.yellow, AppColors.green],
                   begin: Alignment.topCenter,
                   end: Alignment.centerRight,
                   tileMode: TileMode.clamp,
@@ -138,7 +138,7 @@ class _PortraitViewState extends State<PortraitView> {
                         AppColors.black.withOpacity(.4)),
                   ),
                   errorWidget: (context, url, error) =>
-                      Image.asset(AppAssets.me4Img),
+                      Image.asset(AppAssets.me6Img),
                 ),
               ),
             ),

@@ -8,6 +8,8 @@ class AppColors {
   static const Color black = Color(0xFF191919);
   static const Color lightGrey = Color(0xFFCCCCCC);
   static const Color green = Colors.green;
+  static const Color greenAccesnt = Colors.greenAccent;
+
   static const Color yellow = Colors.yellow;
   static const Color red = Colors.red;
   static const Color tealGreen = Color(0xFFD7FFE0);

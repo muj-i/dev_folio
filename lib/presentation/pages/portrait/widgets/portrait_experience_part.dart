@@ -30,7 +30,7 @@ class PortraitExperiencePart1 extends StatelessWidget {
             gradient: LinearGradient(
               colors: [
                 AppColors.yellow.withOpacity(.05),
-                AppColors.red.withOpacity(.4)
+                AppColors.green.withOpacity(.4)
               ],
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
@@ -258,7 +258,7 @@ class PortraitExperiencePart2 extends StatelessWidget {
         gradient: LinearGradient(
           colors: [
             AppColors.yellow.withOpacity(.05),
-            AppColors.red.withOpacity(.4)
+            AppColors.green.withOpacity(.4)
           ],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,

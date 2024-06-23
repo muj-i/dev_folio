@@ -10,7 +10,7 @@ class ShaderMaskWidget extends StatelessWidget {
         blendMode: BlendMode.srcATop,
         shaderCallback: (Rect bounds) {
           return const LinearGradient(
-            colors: [AppColors.yellow, AppColors.red],
+            colors: [AppColors.yellow, AppColors.green],
             begin: Alignment.centerLeft,
             end: Alignment.centerRight,
             tileMode: TileMode.clamp,

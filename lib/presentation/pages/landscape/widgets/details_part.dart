@@ -60,7 +60,7 @@ class DetailsPart extends StatelessWidget {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(500),
                 gradient: const LinearGradient(
-                  colors: [AppColors.yellow, AppColors.red],
+                  colors: [AppColors.yellow, AppColors.green],
                   begin: Alignment.topCenter,
                   end: Alignment.centerRight,
                   tileMode: TileMode.clamp,
