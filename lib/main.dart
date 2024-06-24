@@ -10,8 +10,8 @@ void main() {
     GetMaterialApp(
       title: "Muj's Dev Folio",
       debugShowCheckedModeBanner: false,
-      home: SelectionArea(
-        child: const ResponsiveLayout(
+      home: const SelectionArea(
+        child: ResponsiveLayout(
           portraitView: PortraitView(),
           landscapeView: LandscapeView(),
         ),
