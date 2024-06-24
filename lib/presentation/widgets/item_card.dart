@@ -66,9 +66,14 @@ class ItemCard extends StatelessWidget {
               imageUrl: itemImage,
               fit: BoxFit.fill,
               progressIndicatorBuilder: (context, url, downloadProgress) =>
-                  CircularProgressIndicator(
-                      color: AppColors.black.withOpacity(.4),
-                      value: downloadProgress.progress),
+                  SizedBox(
+                    height: 200,
+                    child: Center(
+                      child: CircularProgressIndicator(
+                          color: AppColors.black.withOpacity(.4),
+                          value: downloadProgress.progress),
+                    ),
+                  ),
               errorWidget: (context, url, error) => Image.network(
                   'https://ih1.redbubble.net/image.485923661.1240/st,small,507x507-pad,600x600,f8f8f8.u1.jpg'),
             ),

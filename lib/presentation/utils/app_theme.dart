@@ -13,6 +13,8 @@ class AppTheme {
       GoogleFonts.poppins(color: AppColors.purpleGrey);
 
   static ThemeData appLightTheme = ThemeData(
+    colorScheme: ColorScheme.fromSeed(seedColor: AppColors.green),
+    useMaterial3: true,
     // useMaterial3: false,
     appBarTheme: const AppBarTheme(
       backgroundColor: AppColors.white,
