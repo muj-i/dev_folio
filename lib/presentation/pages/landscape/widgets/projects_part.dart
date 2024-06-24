@@ -27,6 +27,27 @@ class ProjectsPart extends StatelessWidget {
             Expanded(
               child: ItemCard(
                 itemImage:
+                    'https://raw.githubusercontent.com/muj-i/mocks/main/filmr.png',
+                itemName: 'Filmr',
+                itemDescription:
+                    'A simple Filmr that allows you to browse and explore movie details using the TMDB API. This app leverages the GetX package for state management and the Hive database for local storage of favorite movies. With a clean and user-friendly interface, Filmr offers a seamless movie browsing experience.',
+                techStack: 'Tech stack: Flutter, TMDB API',
+                onTapGithub: () async {
+                  await launchUrl(Uri.parse('https://github.com/muj-i/filmr'));
+                },
+                onTapYoutube: () async {
+                  await launchUrl(
+                      Uri.parse('https://www.youtube.com/watch?v=i_xuSb89Pec'));
+                },
+                onTapAndroid: () async {
+                  await launchUrl(Uri.parse(
+                      'https://github.com/muj-i/filmr/releases/download/v1.0.0/filmr.apk'));
+                },
+              ),
+            ),
+            Expanded(
+              child: ItemCard(
+                itemImage:
                     'https://raw.githubusercontent.com/muj-i/mocks/main/ask_gemini.png',
                 itemName: 'AskGemini',
                 itemDescription:
@@ -68,6 +89,13 @@ class ProjectsPart extends StatelessWidget {
                 },
               ),
             ),
+          ],
+        ),
+        const SizedBox(height: 15),
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
             Expanded(
               child: ItemCard(
                 itemImage:
@@ -86,13 +114,6 @@ class ProjectsPart extends StatelessWidget {
                 },
               ),
             ),
-          ],
-        ),
-        const SizedBox(height: 15),
-        Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
             Expanded(
               child: ItemCard(
                 itemImage:
@@ -117,13 +138,6 @@ class ProjectsPart extends StatelessWidget {
                   await launchUrl(Uri.parse(
                       'https://github.com/muj-i/progress_pal/releases/download/v1.1.1/Progress.Pal.apk'));
                 },
-              ),
-            ),
-            Expanded(
-              child: Container(
-                height: 300,
-                width: 300,
-                color: Colors.white,
               ),
             ),
             Expanded(

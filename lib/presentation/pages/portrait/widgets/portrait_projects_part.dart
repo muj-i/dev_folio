@@ -28,22 +28,21 @@ class PortraitProjectsPart extends StatelessWidget {
           children: [
             ItemCard(
               itemImage:
-                  'https://raw.githubusercontent.com/muj-i/mocks/main/ask_gemini.png',
-              itemName: 'AskGemini',
+                  'https://raw.githubusercontent.com/muj-i/mocks/main/filmr.png',
+              itemName: 'Filmr',
               itemDescription:
-                  'An interactive application utilizing the Gemini API to provide answers to user queries through chat or image inputs. It offers robust solutions for text-based questions and image descriptions, ensuring information is accessible and user-friendly.',
-              techStack: 'Tech stack: Flutter, Gemini API',
+                  'A simple Filmr that allows you to browse and explore movie details using the TMDB API. This app leverages the GetX package for state management and the Hive database for local storage of favorite movies. With a clean and user-friendly interface, Filmr offers a seamless movie browsing experience.',
+              techStack: 'Tech stack: Flutter, TMDB API',
               onTapGithub: () async {
-                await launchUrl(
-                    Uri.parse('https://github.com/muj-i/ask_gemini'));
+                await launchUrl(Uri.parse('https://github.com/muj-i/filmr'));
               },
-              onTapLinkedin: () async {
-                await launchUrl(Uri.parse(
-                    'https://www.linkedin.com/posts/muj-i_just-created-a-new-app-called-askgemini-activity-7203906546500579328-_4ey/'));
+              onTapYoutube: () async {
+                await launchUrl(
+                    Uri.parse('https://www.youtube.com/watch?v=i_xuSb89Pec'));
               },
               onTapAndroid: () async {
                 await launchUrl(Uri.parse(
-                    'https://github.com/muj-i/ask_gemini/releases/download/v1.0.0/ask_gemini.apk'));
+                    'https://github.com/muj-i/filmr/releases/download/v1.0.0/filmr.apk'));
               },
             ),
             Obx(() {
@@ -65,6 +64,26 @@ class PortraitProjectsPart extends StatelessWidget {
           return isShowMoreEnabled.value == true
               ? Column(
                   children: [
+                    ItemCard(
+                      itemImage:
+                          'https://raw.githubusercontent.com/muj-i/mocks/main/ask_gemini.png',
+                      itemName: 'AskGemini',
+                      itemDescription:
+                          'An interactive application utilizing the Gemini API to provide answers to user queries through chat or image inputs. It offers robust solutions for text-based questions and image descriptions, ensuring information is accessible and user-friendly.',
+                      techStack: 'Tech stack: Flutter, Gemini API',
+                      onTapGithub: () async {
+                        await launchUrl(
+                            Uri.parse('https://github.com/muj-i/ask_gemini'));
+                      },
+                      onTapLinkedin: () async {
+                        await launchUrl(Uri.parse(
+                            'https://www.linkedin.com/posts/muj-i_just-created-a-new-app-called-askgemini-activity-7203906546500579328-_4ey/'));
+                      },
+                      onTapAndroid: () async {
+                        await launchUrl(Uri.parse(
+                            'https://github.com/muj-i/ask_gemini/releases/download/v1.0.0/ask_gemini.apk'));
+                      },
+                    ),
                     ItemCard(
                       itemImage:
                           'https://raw.githubusercontent.com/muj-i/mocks/main/crafty_bay.png',
