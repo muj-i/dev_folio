@@ -1,12 +1,15 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:dev_folio/presentation/pages/portrait/widgets/experience0.dart';
+import 'package:dev_folio/presentation/pages/portrait/widgets/experience1.dart';
+import 'package:dev_folio/presentation/pages/portrait/widgets/experience2.dart';
 import 'package:dev_folio/presentation/pages/portrait/widgets/portait_professional_traings.dart';
 import 'package:dev_folio/presentation/pages/portrait/widgets/portrait_contact_me.dart';
 import 'package:dev_folio/presentation/pages/portrait/widgets/portrait_details_part.dart';
-import 'package:dev_folio/presentation/pages/portrait/widgets/portrait_experience_part.dart';
 import 'package:dev_folio/presentation/pages/portrait/widgets/portrait_projects_part.dart';
 import 'package:dev_folio/presentation/pages/portrait/widgets/tech_stack_column.dart';
 import 'package:dev_folio/presentation/utils/app_assets.dart';
 import 'package:dev_folio/presentation/utils/app_colors.dart';
+import 'package:dev_folio/presentation/utils/app_theme.dart';
 import 'package:dev_folio/presentation/utils/strtings.dart';
 import 'package:dev_folio/presentation/widgets/about_me.dart';
 import 'package:dev_folio/presentation/widgets/shader_mask_widget.dart';
@@ -70,11 +73,21 @@ class _PortraitViewState extends State<PortraitView> {
               const SizedBox(height: 100),
               Container(
                 key: _sectionExperienceKey,
-                child: const Column(
+                child: Column(
                   children: [
-                    PortraitExperiencePart1(),
-                    SizedBox(height: 20),
-                    PortraitExperiencePart2(),
+                    Center(
+                      child: Text(
+                        AppStrings.workExperienceText,
+                        style: AppTheme.poppinsTextStyle.copyWith(
+                            fontSize: 45, fontWeight: FontWeight.bold),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                    const PortraitExperience0(),
+                    const SizedBox(height: 20),
+                    const PortraitExperience1(),
+                    const SizedBox(height: 20),
+                    const PortraitExperience2(),
                   ],
                 ),
               ),

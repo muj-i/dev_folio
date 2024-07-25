@@ -34,18 +34,18 @@ class AppTheme {
     //* elevated button theme
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ButtonStyle(
-        backgroundColor: MaterialStateProperty.resolveWith<Color?>(
+        backgroundColor: WidgetStateProperty.resolveWith<Color?>(
           (states) => AppColors.blue,
         ),
-        foregroundColor: MaterialStateProperty.resolveWith<Color?>(
+        foregroundColor: WidgetStateProperty.resolveWith<Color?>(
           (states) => AppColors.white,
         ),
-        shape: MaterialStateProperty.resolveWith<OutlinedBorder?>(
+        shape: WidgetStateProperty.resolveWith<OutlinedBorder?>(
           (states) => RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(8.0),
           ),
         ),
-        textStyle: MaterialStateProperty.resolveWith<TextStyle?>(
+        textStyle: WidgetStateProperty.resolveWith<TextStyle?>(
           (states) => const TextStyle(
             fontSize: 16,
             fontWeight: FontWeight.w500,
@@ -56,10 +56,10 @@ class AppTheme {
 
     textButtonTheme: TextButtonThemeData(
       style: ButtonStyle(
-        foregroundColor: MaterialStateProperty.resolveWith<Color?>(
+        foregroundColor: WidgetStateProperty.resolveWith<Color?>(
           (states) => AppColors.black,
         ),
-        textStyle: MaterialStateProperty.resolveWith<TextStyle?>(
+        textStyle: WidgetStateProperty.resolveWith<TextStyle?>(
           (states) => const TextStyle(
             fontSize: 16,
             fontWeight: FontWeight.w500,
@@ -70,23 +70,23 @@ class AppTheme {
 
     outlinedButtonTheme: OutlinedButtonThemeData(
       style: ButtonStyle(
-        backgroundColor: MaterialStateProperty.resolveWith<Color?>(
+        backgroundColor: WidgetStateProperty.resolveWith<Color?>(
           (states) => AppColors.white,
         ),
-        foregroundColor: MaterialStateProperty.resolveWith<Color?>(
+        foregroundColor: WidgetStateProperty.resolveWith<Color?>(
           (states) => AppColors.black,
         ),
-        side: MaterialStateProperty.resolveWith<BorderSide?>(
+        side: WidgetStateProperty.resolveWith<BorderSide?>(
           (states) => const BorderSide(
             color: AppColors.black,
           ),
         ),
-        shape: MaterialStateProperty.resolveWith<OutlinedBorder?>(
+        shape: WidgetStateProperty.resolveWith<OutlinedBorder?>(
           (states) => RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(30.0),
           ),
         ),
-        textStyle: MaterialStateProperty.resolveWith<TextStyle?>(
+        textStyle: WidgetStateProperty.resolveWith<TextStyle?>(
           (states) => const TextStyle(
             fontSize: 16,
             fontWeight: FontWeight.w500,
@@ -113,18 +113,18 @@ class AppTheme {
     //* elevated button theme
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ButtonStyle(
-        backgroundColor: MaterialStateProperty.resolveWith<Color?>(
+        backgroundColor: WidgetStateProperty.resolveWith<Color?>(
           (states) => AppColors.blue,
         ),
-        foregroundColor: MaterialStateProperty.resolveWith<Color?>(
+        foregroundColor: WidgetStateProperty.resolveWith<Color?>(
           (states) => AppColors.white,
         ),
-        shape: MaterialStateProperty.resolveWith<OutlinedBorder?>(
+        shape: WidgetStateProperty.resolveWith<OutlinedBorder?>(
           (states) => RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(8.0),
           ),
         ),
-        textStyle: MaterialStateProperty.resolveWith<TextStyle?>(
+        textStyle: WidgetStateProperty.resolveWith<TextStyle?>(
           (states) => const TextStyle(
             fontSize: 16,
             fontWeight: FontWeight.w500,
@@ -134,10 +134,10 @@ class AppTheme {
     ),
     textButtonTheme: TextButtonThemeData(
       style: ButtonStyle(
-        foregroundColor: MaterialStateProperty.resolveWith<Color?>(
+        foregroundColor: WidgetStateProperty.resolveWith<Color?>(
           (states) => AppColors.white,
         ),
-        textStyle: MaterialStateProperty.resolveWith<TextStyle?>(
+        textStyle: WidgetStateProperty.resolveWith<TextStyle?>(
           (states) => const TextStyle(
             fontSize: 16,
             fontWeight: FontWeight.w500,
@@ -147,23 +147,23 @@ class AppTheme {
     ),
     outlinedButtonTheme: OutlinedButtonThemeData(
       style: ButtonStyle(
-        backgroundColor: MaterialStateProperty.resolveWith<Color?>(
+        backgroundColor: WidgetStateProperty.resolveWith<Color?>(
           (states) => AppColors.black,
         ),
-        foregroundColor: MaterialStateProperty.resolveWith<Color?>(
+        foregroundColor: WidgetStateProperty.resolveWith<Color?>(
           (states) => AppColors.white,
         ),
-        side: MaterialStateProperty.resolveWith<BorderSide?>(
+        side: WidgetStateProperty.resolveWith<BorderSide?>(
           (states) => const BorderSide(
             color: AppColors.white,
           ),
         ),
-        shape: MaterialStateProperty.resolveWith<OutlinedBorder?>(
+        shape: WidgetStateProperty.resolveWith<OutlinedBorder?>(
           (states) => RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(30.0),
           ),
         ),
-        textStyle: MaterialStateProperty.resolveWith<TextStyle?>(
+        textStyle: WidgetStateProperty.resolveWith<TextStyle?>(
           (states) => const TextStyle(
             fontSize: 16,
             fontWeight: FontWeight.w500,

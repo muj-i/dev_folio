@@ -1,6 +1,8 @@
 import 'package:dev_folio/presentation/pages/landscape/widgets/contact_me.dart';
 import 'package:dev_folio/presentation/pages/landscape/widgets/details_part.dart';
-import 'package:dev_folio/presentation/pages/landscape/widgets/experience_part.dart';
+import 'package:dev_folio/presentation/pages/landscape/widgets/experience0.dart';
+import 'package:dev_folio/presentation/pages/landscape/widgets/experience1.dart';
+import 'package:dev_folio/presentation/pages/landscape/widgets/experience2.dart';
 import 'package:dev_folio/presentation/pages/landscape/widgets/professional_traings.dart';
 import 'package:dev_folio/presentation/pages/landscape/widgets/projects_part.dart';
 import 'package:dev_folio/presentation/pages/landscape/widgets/tech_stack_row.dart';
@@ -68,11 +70,20 @@ class _LandscapeViewState extends State<LandscapeView> {
               const SizedBox(height: 100),
               Container(
                 key: _sectionExperienceKey,
-                child: const Column(
+                child: Column(
                   children: [
-                    ExperiencePart1(),
-                    SizedBox(height: 20),
-                    ExperiencePart2(),
+                    Center(
+                      child: Text(
+                        AppStrings.workExperienceText,
+                        style: AppTheme.poppinsTextStyle.copyWith(
+                            fontSize: 45, fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                    const Experience0(),
+                    const SizedBox(height: 20),
+                    const Experience1(),
+                    const SizedBox(height: 20),
+                    const Experience2(),
                   ],
                 ),
               ),
