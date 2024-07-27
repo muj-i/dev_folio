@@ -1,7 +1,6 @@
 import 'package:dev_folio/presentation/utils/app_colors.dart';
 import 'package:dev_folio/presentation/utils/app_theme.dart';
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class PortraitExperiencePart extends StatelessWidget {
   const PortraitExperiencePart(
@@ -43,8 +42,10 @@ class PortraitExperiencePart extends StatelessWidget {
           decoration: BoxDecoration(
             gradient: LinearGradient(
               colors: [
-                AppColors.yellow.withOpacity(.05),
-                AppColors.green.withOpacity(.4)
+                AppColors.yellow.withOpacity(.1),
+                AppColors.green.withOpacity(.4),
+                AppColors.white.withOpacity(.1),
+                AppColors.white.withOpacity(.1)
               ],
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
@@ -178,124 +179,6 @@ class PortraitExperiencePart extends StatelessWidget {
           ),
         ),
       ],
-    );
-  }
-}
-
-class PortraitExperiencePart2 extends StatelessWidget {
-  const PortraitExperiencePart2({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(20),
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          colors: [
-            AppColors.yellow.withOpacity(.05),
-            AppColors.green.withOpacity(.4)
-          ],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-        ),
-        borderRadius: BorderRadius.circular(20),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          const SizedBox(height: 20),
-          Text(
-            'Flutter Developer',
-            style: AppTheme.poppinsTextStyle.copyWith(
-              fontSize: 18,
-              fontWeight: FontWeight.bold,
-              color: AppColors.black,
-            ),
-          ),
-          Text(
-            'Code Village,',
-            style: AppTheme.poppinsTextStyle.copyWith(
-              fontSize: 18,
-              color: AppColors.black,
-            ),
-          ),
-          Text(
-            'Dhaka - 1230, Bangladesh.',
-            style: AppTheme.poppinsTextStyle.copyWith(
-              fontSize: 18,
-              color: AppColors.black,
-            ),
-          ),
-          Text(
-            'May 2022 - June 2023',
-            style: AppTheme.poppinsTextStyle.copyWith(
-              fontSize: 18,
-              color: AppColors.black,
-            ),
-          ),
-          // InkWell(
-          //   onTap: () async {
-          //     await launchUrl(Uri.parse(
-          //         'https://www.icloud.com/iclouddrive/09cUao7OHItu4-OVeimpdsMzA#Experience_Letter'));
-          //   },
-          //   child: Text(
-          //     'Letter of Experience.',
-          //     style: AppTheme.poppinsTextStyle.copyWith(
-          //         fontSize: 18,
-          //         color: AppColors.blue,
-          //         decoration: TextDecoration.underline,
-          //         decorationColor: AppColors.blue),
-          //   ),
-          // ),
-          InkWell(
-            onTap: () async {
-              await launchUrl(Uri.parse('https://codevillage.com.bd/'));
-            },
-            child: Text(
-              'Visit Website.',
-              style: AppTheme.poppinsTextStyle.copyWith(
-                  fontSize: 18,
-                  color: AppColors.blue,
-                  decoration: TextDecoration.underline,
-                  decorationColor: AppColors.blue),
-            ),
-          ),
-          const SizedBox(height: 20),
-          Text(
-            'Responsibilities:',
-            style: AppTheme.poppinsTextStyle.copyWith(
-              fontSize: 18,
-              fontWeight: FontWeight.bold,
-              color: AppColors.black,
-            ),
-          ),
-          const SizedBox(height: 10),
-          Text(
-            '• Developed highly scalable flutter application using Provider state management and REST APIs.',
-            style: AppTheme.poppinsTextStyle.copyWith(
-              fontSize: 16,
-              color: AppColors.black,
-            ),
-          ),
-          const SizedBox(height: 10),
-          Text(
-            '• Worked collaboratively within an agile development team.',
-            style: AppTheme.poppinsTextStyle.copyWith(
-              fontSize: 16,
-              color: AppColors.black,
-            ),
-          ),
-          const SizedBox(height: 10),
-          Text(
-            '• Ensured code maintainability and quality by keeping the codebase clean and well-documented.',
-            style: AppTheme.poppinsTextStyle.copyWith(
-              fontSize: 16,
-              color: AppColors.black,
-            ),
-          ),
-          const SizedBox(height: 20),
-        ],
-      ),
     );
   }
 }
