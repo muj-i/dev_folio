@@ -1,37 +1,49 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class ResponsiveLayout extends StatelessWidget {
+class ResponsiveLayout extends StatefulWidget {
   final Widget portraitView;
   final Widget landscapeView;
 
   const ResponsiveLayout(
       {super.key, required this.portraitView, required this.landscapeView});
 
-  static RxBool isLoading = false.obs;
+  static RxBool isLoading = true.obs;
+
+  @override
+  State<ResponsiveLayout> createState() => _ResponsiveLayoutState();
+}
+
+class _ResponsiveLayoutState extends State<ResponsiveLayout> {
   showLoader() {
-    isLoading.value = true;
     Future.delayed(const Duration(milliseconds: 500), () {
-      isLoading.value = false;
+      ResponsiveLayout.isLoading.value = false;
     });
   }
 
   @override
-  Widget build(BuildContext context) {
+  void initState() {
     showLoader();
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
     return Obx(() {
-      return isLoading.value
-          ? Center(
-              child: CircularProgressIndicator(
-              valueColor:
-                  AlwaysStoppedAnimation<Color>(Colors.black.withOpacity(.5)),
-            ))
+      return ResponsiveLayout.isLoading.value
+          ? Scaffold(
+            body: Center(
+                child: CircularProgressIndicator(
+                valueColor:
+                    AlwaysStoppedAnimation<Color>(Colors.black.withOpacity(.5)),
+              )),
+          )
           : LayoutBuilder(
               builder: (context, constraints) {
                 if (constraints.maxWidth < 700) {
-                  return portraitView;
+                  return widget.portraitView;
                 } else {
-                  return landscapeView;
+                  return widget.landscapeView;
                 }
               },
             );
