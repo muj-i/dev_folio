@@ -67,13 +67,13 @@ class ItemCard extends StatelessWidget {
               fit: BoxFit.fill,
               progressIndicatorBuilder: (context, url, downloadProgress) =>
                   SizedBox(
-                    height: 200,
-                    child: Center(
-                      child: CircularProgressIndicator(
-                          color: AppColors.black.withOpacity(.4),
-                          value: downloadProgress.progress),
-                    ),
-                  ),
+                height: 200,
+                child: Center(
+                  child: CircularProgressIndicator(
+                      color: AppColors.black.withOpacity(.4),
+                      value: downloadProgress.progress),
+                ),
+              ),
               errorWidget: (context, url, error) => Image.network(
                   'https://ih1.redbubble.net/image.485923661.1240/st,small,507x507-pad,600x600,f8f8f8.u1.jpg'),
             ),
@@ -112,32 +112,34 @@ class ItemCard extends StatelessWidget {
                 ),
           techStack == null ? const SizedBox() : const SizedBox(height: 10),
           isCompanyProject == true
-              ? Row(
-                  children: [
-                    const Text(
-                      'Preview',
-                      style: TextStyle(
-                        fontSize: 14,
-                      ),
-                    ),
-                    const SizedBox(width: 10),
-                    InkWell(
-                      onTap: onTapAppStore,
-                      child: Image.asset(
-                        AppAssets.appStoreLogo,
-                        height: 20,
-                      ),
-                    ),
-                    const SizedBox(width: 10),
-                    InkWell(
-                      onTap: onTapPlayStore,
-                      child: Image.asset(
-                        AppAssets.playStoreLogo,
-                        height: 20,
-                      ),
-                    ),
-                  ],
-                )
+              ? (onTapAppStore != null && onTapPlayStore != null)
+                  ? Row(
+                      children: [
+                        const Text(
+                          'Preview',
+                          style: TextStyle(
+                            fontSize: 14,
+                          ),
+                        ),
+                        const SizedBox(width: 10),
+                        InkWell(
+                          onTap: onTapAppStore,
+                          child: Image.asset(
+                            AppAssets.appStoreLogo,
+                            height: 20,
+                          ),
+                        ),
+                        const SizedBox(width: 10),
+                        InkWell(
+                          onTap: onTapPlayStore,
+                          child: Image.asset(
+                            AppAssets.playStoreLogo,
+                            height: 20,
+                          ),
+                        ),
+                      ],
+                    )
+                  : const SizedBox()
               : Row(
                   children: [
                     onTapGithub == null

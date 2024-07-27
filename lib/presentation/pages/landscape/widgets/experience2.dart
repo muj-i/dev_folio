@@ -1,4 +1,5 @@
 import 'package:dev_folio/presentation/pages/landscape/widgets/experience_part.dart';
+import 'package:dev_folio/presentation/widgets/item_card.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -23,6 +24,40 @@ class Experience2 extends StatelessWidget {
       text6: '• Worked collaboratively within an agile development team.',
       text7:
           '• Ensured code maintainability and quality by keeping the codebase clean and well-documented.',
+      widget: const Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Expanded(
+            child: ItemCard(
+              itemImage:
+                  'https://raw.githubusercontent.com/muj-i/mocks/main/company_mocs/code-vill/makan.png',
+              itemName: 'MyMakan',
+              itemDescription:
+                  'MyMakan is a real state app that helps you find the perfect place to live. It provides a wide range of properties to buy, rent, or share.',
+              techStack: 'Tech stack: Flutter, Firebase, Nest.js, MongoDB',
+              isCompanyProject: true,
+            ),
+          ),
+          Expanded(
+            child: ItemCard(
+              itemImage:
+                  'https://raw.githubusercontent.com/muj-i/mocks/main/company_mocs/code-vill/tv.png',
+              itemName: 'RajDhaniTV',
+              itemDescription:
+                  'A TV app that provides live streaming of various TV channels. It also has a feature to watch missed programs.',
+              techStack: 'Tech stack: Flutter, Firebase, Laravel...',
+              isCompanyProject: true,
+            ),
+          ),
+          Expanded(
+            child: SizedBox(
+              height: 300,
+              width: 300,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
