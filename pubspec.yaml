@@ -1,7 +1,7 @@
 name: dev_folio
 version: 1.0.0+1
 publish_to: none
-description: A new Flutter project.
+description: Muj's Portfolio
 environment: 
   sdk: '>=3.3.3 <4.0.0'
 
