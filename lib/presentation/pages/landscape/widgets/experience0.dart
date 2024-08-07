@@ -10,7 +10,7 @@ class Experience0 extends StatelessWidget {
   Widget build(BuildContext context) {
     return ExperiencePart(
       text1: 'Software Engineer I (Flutter)',
-      text2: 'Sheba Fintech Limited,',
+      text2: 'Sheba Platform Limited,',
       text3: 'Mohakhali DOHS, Dhaka, Bangladesh.',
       text4: 'July 2024 - Present',
       urlText: 'sheba-platform.xyz',
