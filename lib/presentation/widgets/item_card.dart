@@ -7,7 +7,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 class ItemCard extends StatelessWidget {
   const ItemCard({
     super.key,
-    required this.itemImage,
+    this.itemImage,
     this.itemName,
     this.itemDescription,
     this.techStack,
@@ -24,7 +24,7 @@ class ItemCard extends StatelessWidget {
     this.onTapVerifyCertificate,
   });
 
-  final String itemImage;
+  final String? itemImage;
   final String? itemName;
   final String? itemDescription;
   final String? techStack;
@@ -60,29 +60,30 @@ class ItemCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          ClipRRect(
-            borderRadius: BorderRadius.circular(16),
-            child: CachedNetworkImage(
-              imageUrl: itemImage,
-              fit: BoxFit.fill,
-              progressIndicatorBuilder: (context, url, downloadProgress) =>
-                  SizedBox(
-                height: 200,
-                child: Center(
-                  child: CircularProgressIndicator(
-                      color: AppColors.black.withOpacity(.4),
-                      value: downloadProgress.progress),
+          if (itemImage != null)
+            ClipRRect(
+              borderRadius: BorderRadius.circular(16),
+              child: CachedNetworkImage(
+                imageUrl: itemImage ?? '',
+                fit: BoxFit.fill,
+                progressIndicatorBuilder: (context, url, downloadProgress) =>
+                    SizedBox(
+                  height: 200,
+                  child: Center(
+                    child: CircularProgressIndicator(
+                        color: AppColors.black.withOpacity(.4),
+                        value: downloadProgress.progress),
+                  ),
                 ),
+                errorWidget: (context, url, error) => Image.network(
+                    'https://ih1.redbubble.net/image.485923661.1240/st,small,507x507-pad,600x600,f8f8f8.u1.jpg'),
               ),
-              errorWidget: (context, url, error) => Image.network(
-                  'https://ih1.redbubble.net/image.485923661.1240/st,small,507x507-pad,600x600,f8f8f8.u1.jpg'),
+              // Image.network(
+              //   itemImage ?? '',
+              //   fit: BoxFit.fill,
+              // ),
             ),
-            // Image.network(
-            //   itemImage ?? '',
-            //   fit: BoxFit.fill,
-            // ),
-          ),
-          const SizedBox(height: 20),
+          if (itemImage != null) const SizedBox(height: 20),
           Text(
             itemName ?? '',
             style: const TextStyle(
@@ -112,34 +113,35 @@ class ItemCard extends StatelessWidget {
                 ),
           techStack == null ? const SizedBox() : const SizedBox(height: 10),
           isCompanyProject == true
-              ? (onTapAppStore != null && onTapPlayStore != null)
-                  ? Row(
-                      children: [
-                        const Text(
-                          'Preview',
-                          style: TextStyle(
-                            fontSize: 14,
-                          ),
+              ? Row(
+                  children: [
+                    if (onTapAppStore != null || onTapPlayStore != null)
+                      const Text(
+                        'Preview',
+                        style: TextStyle(
+                          fontSize: 14,
                         ),
-                        const SizedBox(width: 10),
-                        InkWell(
-                          onTap: onTapAppStore,
-                          child: Image.asset(
-                            AppAssets.appStoreLogo,
-                            height: 20,
-                          ),
+                      ),
+                    if (onTapAppStore != null) const SizedBox(width: 10),
+                    if (onTapAppStore != null)
+                      InkWell(
+                        onTap: onTapAppStore,
+                        child: Image.asset(
+                          AppAssets.appStoreLogo,
+                          height: 20,
                         ),
-                        const SizedBox(width: 10),
-                        InkWell(
-                          onTap: onTapPlayStore,
-                          child: Image.asset(
-                            AppAssets.playStoreLogo,
-                            height: 20,
-                          ),
+                      ),
+                    if (onTapPlayStore != null) const SizedBox(width: 10),
+                    if (onTapPlayStore != null)
+                      InkWell(
+                        onTap: onTapPlayStore,
+                        child: Image.asset(
+                          AppAssets.playStoreLogo,
+                          height: 20,
                         ),
-                      ],
-                    )
-                  : const SizedBox()
+                      ),
+                  ],
+                )
               : Row(
                   children: [
                     onTapGithub == null
