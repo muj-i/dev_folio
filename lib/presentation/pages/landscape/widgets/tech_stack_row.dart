@@ -12,8 +12,8 @@ class TechStackRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     TechMobileDevData techMobileDevData = TechMobileDevData();
-    // TechServerDevData techServerDevData = TechServerDevData();
-    // TechDatabaseData techDatabaseData = TechDatabaseData();
+    TechServerDevData techServerDevData = TechServerDevData();
+    TechDatabaseData techDatabaseData = TechDatabaseData();
     TechProjectManagementData techProjectManagementData =
         TechProjectManagementData();
     TechVersionControlData techVersionControlData = TechVersionControlData();
@@ -42,26 +42,26 @@ class TechStackRow extends StatelessWidget {
               techSdkItems: techMobileDevData.items,
             ),
             TechStackGridView(
-              title: '#IDEs & Code Editors',
-              techSdkItems: techIDEsAndCodeEditorsData.items,
+              title: '#Server Side',
+              techSdkItems: techServerDevData.items,
+            ),
+            TechStackGridView(
+              title: '#Database',
+              techSdkItems: techDatabaseData.items,
             ),
             TechStackGridView(
               title: '#Version Control',
               techSdkItems: techVersionControlData.items,
             ),
-            // TechStackGridView(
-            //   title: '#Server Side',
-            //   techSdkItems: techServerDevData.items,
-            // ),
-            // TechStackGridView(
-            //   title: '#Database',
-            //   techSdkItems: techDatabaseData.items,
-            // ),
           ],
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
+            TechStackGridView(
+              title: '#IDEs & Code Editors',
+              techSdkItems: techIDEsAndCodeEditorsData.items,
+            ),
             TechStackGridView(
               title: '#Project Management',
               techSdkItems: techProjectManagementData.items,

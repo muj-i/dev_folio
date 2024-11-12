@@ -44,6 +44,7 @@ class TechStackAssets {
   static const xcode = '$_root4/Xcode.svg';
   static const vsCode = '$_root4/vscode.svg';
   static const github = '$_root4/github.svg';
+  static const bitbucket = 'https://raw.githubusercontent.com/muj-i/muj-i/c4a90bd8b5cbeb799666361111c52f351891da27/icons/bitbucket.svg';
   static const codeMagic = '$_root4/codemagic.svg';
   static const stream = '$_root5/stream.svg';
   static const notion = '$_root5/notion.svg';

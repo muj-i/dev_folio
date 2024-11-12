@@ -10,8 +10,8 @@ class TechMobileDevData {
 
 class TechServerDevData {
   final List<TechStackModel> items = [
-    TechStackModel(svgImage: TechStackAssets.dJango, title: 'Django'),
-    TechStackModel(svgImage: TechStackAssets.node, title: 'NodeJs'),
+    TechStackModel(svgImage: TechStackAssets.js, title: 'JavaScript'),
+    TechStackModel(svgImage: TechStackAssets.ts, title: 'TypeScript'),
     TechStackModel(svgImage: TechStackAssets.nest, title: 'NestJs'),
   ];
 }
@@ -35,6 +35,7 @@ class TechVersionControlData {
   final List<TechStackModel> items = [
     TechStackModel(svgImage: TechStackAssets.git, title: 'Git'),
     TechStackModel(svgImage: TechStackAssets.github, title: 'GitHub'),
+    TechStackModel(svgImage: TechStackAssets.bitbucket, title: 'Bitbucket'),
   ];
 }
 
