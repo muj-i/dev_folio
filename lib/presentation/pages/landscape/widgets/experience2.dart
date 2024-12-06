@@ -43,7 +43,7 @@ class Experience2 extends StatelessWidget {
             child: ItemCard(
               itemImage:
                   'https://raw.githubusercontent.com/muj-i/mocks/main/company_mocs/code-vill/tv.png',
-              itemName: 'RajDhaniTV',
+              itemName: 'TheTV',
               itemDescription:
                   'A TV app that provides live streaming of various TV channels. It also has a feature to watch missed programs.',
               techStack: 'Tech stack: Flutter, Firebase, Laravel...',
