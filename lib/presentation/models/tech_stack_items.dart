@@ -10,6 +10,7 @@ class TechMobileDevData {
 
 class TechServerDevData {
   final List<TechStackModel> items = [
+    TechStackModel(svgImage: TechStackAssets.go, title: 'Go'),
     TechStackModel(svgImage: TechStackAssets.js, title: 'JavaScript'),
     TechStackModel(svgImage: TechStackAssets.ts, title: 'TypeScript'),
     TechStackModel(svgImage: TechStackAssets.nest, title: 'NestJs'),
