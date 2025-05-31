@@ -10,12 +10,12 @@ class Experience0 extends StatelessWidget {
   Widget build(BuildContext context) {
     return ExperiencePart(
       text1: 'Software Engineer I',
-      text2: 'Sheba Fintech Limited,',
+      text2: 'Sheba Platform Limited,',
       text3: 'Mohakhali DOHS, Dhaka, Bangladesh.',
       text4: 'July 2024 - Present',
-      urlText: 'shebapay.xyz',
+      urlText: 'sheba-platform.xyz',
       onTap: () async {
-        await launchUrl(Uri.parse('https://shebapay.xyz/'));
+        await launchUrl(Uri.parse('https://sheba-platform.xyz/'));
       },
       text5:
           '• Maintain and enhance the existing codebase, ensuring stability and performance in the production app.',
@@ -36,6 +36,7 @@ class Experience0 extends StatelessWidget {
               Expanded(
                 child: ItemCard(
                   itemName: 'sheba.xyz',
+                  itemImage: 'https://raw.githubusercontent.com/muj-i/mocks/main/company_mocs/sx.jpeg',
                   itemDescription:
                       'Sheba.xyz is the first and the largest local service marketplace in Bangladesh for all urban lifestyle services. We help you to hire local service provider and to get things done without any hassle.',
                   techStack: 'Tech stack: Flutter, Laravel, MySQL, Docker...',
@@ -53,6 +54,7 @@ class Experience0 extends StatelessWidget {
               Expanded(
                 child: ItemCard(
                   itemName: 'sPro',
+                  itemImage: 'https://raw.githubusercontent.com/muj-i/mocks/main/company_mocs/sp.png',
                   itemDescription:
                       'sPro is a service provider app for Sheba.xyz. It helps service providers to manage their services, bookings, and earnings.',
                   techStack: 'Tech stack: Flutter, Laravel, MySQL, Docker...',
@@ -70,6 +72,7 @@ class Experience0 extends StatelessWidget {
               Expanded(
                 child: ItemCard(
                   itemName: 'sheba manager',
+                  itemImage: 'https://raw.githubusercontent.com/muj-i/mocks/main/company_mocs/sm.png',
                   itemDescription:
                       'sheba manager is a pos system for small businesses. It helps businesses to manage their sales, inventory, and employees.',
                   techStack: 'Tech stack: Flutter, Laravel, MySQL, Docker...',
@@ -93,6 +96,7 @@ class Experience0 extends StatelessWidget {
               Expanded(
                 child: ItemCard(
                   itemName: 'digiGO',
+                  itemImage: 'https://raw.githubusercontent.com/muj-i/mocks/main/company_mocs/dg.png',
                   itemDescription:
                       'digiGO is a comprehensive HR management system that helps organizations manage their employees, attendance, leaves, payroll, and more.',
                   techStack: 'Tech stack: Flutter, Laravel, MySQL, Docker...',
