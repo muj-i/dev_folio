@@ -36,7 +36,8 @@ class Experience0 extends StatelessWidget {
               Expanded(
                 child: ItemCard(
                   itemName: 'sheba.xyz',
-                  itemImage: 'https://raw.githubusercontent.com/muj-i/mocks/main/company_mocs/sx.jpeg',
+                  itemImage:
+                      'https://raw.githubusercontent.com/muj-i/mocks/main/company_mocs/sheba/sx.jpeg',
                   itemDescription:
                       'Sheba.xyz is the first and the largest local service marketplace in Bangladesh for all urban lifestyle services. We help you to hire local service provider and to get things done without any hassle.',
                   techStack: 'Tech stack: Flutter, Laravel, MySQL, Docker...',
@@ -53,18 +54,19 @@ class Experience0 extends StatelessWidget {
               ),
               Expanded(
                 child: ItemCard(
-                  itemName: 'sPro',
-                  itemImage: 'https://raw.githubusercontent.com/muj-i/mocks/main/company_mocs/sp.png',
+                  itemName: 'digiGO',
+                  itemImage:
+                      'https://raw.githubusercontent.com/muj-i/mocks/main/company_mocs/sheba/dg.png',
                   itemDescription:
-                      'sPro is a service provider app for Sheba.xyz. It helps service providers to manage their services, bookings, and earnings.',
+                      'digiGO is a comprehensive HR management system that helps organizations manage their employees, attendance, leaves, payroll, and more.',
                   techStack: 'Tech stack: Flutter, Laravel, MySQL, Docker...',
                   onTapAppStore: () async {
                     await launchUrl(Uri.parse(
-                        'https://apps.apple.com/us/app/sheba-xyz-service-platform/id1511707916'));
+                        'https://apps.apple.com/us/app/digigo-hr-management-app/id1491939278'));
                   },
                   onTapPlayStore: () async {
                     await launchUrl(Uri.parse(
-                        'https://play.google.com/store/apps/details?id=xyz.sheba.resource'));
+                        'https://play.google.com/store/apps/details?id=xyz.sheba.emanager'));
                   },
                   isCompanyProject: true,
                 ),
@@ -72,14 +74,15 @@ class Experience0 extends StatelessWidget {
               Expanded(
                 child: ItemCard(
                   itemName: 'sheba manager',
-                  itemImage: 'https://raw.githubusercontent.com/muj-i/mocks/main/company_mocs/sm.png',
+                  itemImage:
+                      'https://raw.githubusercontent.com/muj-i/mocks/main/company_mocs/sheba/sm.png',
                   itemDescription:
                       'sheba manager is a pos system for small businesses. It helps businesses to manage their sales, inventory, and employees.',
                   techStack: 'Tech stack: Flutter, Laravel, MySQL, Docker...',
-                  // onTapAppStore: () async {
-                  //   await launchUrl(Uri.parse(
-                  //       'https://apps.apple.com/us/app/sheba-xyz-service-platform/id1399019504'));
-                  // },
+                  onTapAppStore: () async {
+                    await launchUrl(Uri.parse(
+                        'https://apps.apple.com/us/app/sheba-manager/id6738626092'));
+                  },
                   onTapPlayStore: () async {
                     await launchUrl(Uri.parse(
                         'https://play.google.com/store/apps/details?id=xyz.sheba.managerapp'));
@@ -95,18 +98,19 @@ class Experience0 extends StatelessWidget {
             children: [
               Expanded(
                 child: ItemCard(
-                  itemName: 'digiGO',
-                  itemImage: 'https://raw.githubusercontent.com/muj-i/mocks/main/company_mocs/dg.png',
+                  itemName: 'sPro',
+                  itemImage:
+                      'https://raw.githubusercontent.com/muj-i/mocks/main/company_mocs/sheba/sp.png',
                   itemDescription:
-                      'digiGO is a comprehensive HR management system that helps organizations manage their employees, attendance, leaves, payroll, and more.',
+                      'sPro is a service provider app for Sheba.xyz. It helps service providers to manage their services, bookings, and earnings.',
                   techStack: 'Tech stack: Flutter, Laravel, MySQL, Docker...',
                   onTapAppStore: () async {
                     await launchUrl(Uri.parse(
-                        'https://apps.apple.com/us/app/digigo-hr-management-app/id1491939278'));
+                        'https://apps.apple.com/us/app/sheba-xyz-service-platform/id1511707916'));
                   },
                   onTapPlayStore: () async {
                     await launchUrl(Uri.parse(
-                        'https://play.google.com/store/apps/details?id=xyz.sheba.emanager'));
+                        'https://play.google.com/store/apps/details?id=xyz.sheba.resource'));
                   },
                   isCompanyProject: true,
                 ),

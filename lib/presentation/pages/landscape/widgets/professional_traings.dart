@@ -27,7 +27,7 @@ class ProfessionalTraing extends StatelessWidget {
               child: ItemCard(
                 itemImage:
                     'https://raw.githubusercontent.com/muj-i/mocks/main/certificates/c7841-mujahedul-islam.png',
-                itemName: 'Certificate of Completion - C7841',
+                itemName: 'Certificate of Completion - Flutter - C7841',
                 verifyText: 'Verify Certificate',
                 onTapVerifyCertificate: () async {
                   await launchUrl(Uri.parse(
@@ -38,12 +38,53 @@ class ProfessionalTraing extends StatelessWidget {
             Expanded(
               child: ItemCard(
                 itemImage:
+                    'https://raw.githubusercontent.com/muj-i/mocks/main/certificates/c27064-mujahedul-islam.png',
+                itemName: 'Certificate of Completion - MERN - C27064',
+                verifyText: 'Verify Certificate',
+                onTapVerifyCertificate: () async {
+                  await launchUrl(Uri.parse(
+                      'https://ostad.app/share/certificate/c27064-mujahedul-islam'));
+                },
+              ),
+            ),
+            Expanded(
+              child: ItemCard(
+                itemImage:
+                    'https://raw.githubusercontent.com/muj-i/mocks/main/certificates/c26321-mujahedul-islam.png',
+                itemName: 'Certificate of Completion - Go Workshop - C26321',
+                verifyText: 'Verify Certificate',
+                onTapVerifyCertificate: () async {
+                  await launchUrl(Uri.parse(
+                      'https://ostad.app/share/certificate/c26321-mujahedul-islam'));
+                },
+              ),
+            ),
+          ],
+        ),
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Expanded(
+              child: ItemCard(
+                itemImage:
                     'https://raw.githubusercontent.com/muj-i/mocks/main/certificates/a7843-mujahedul-islam.png',
-                itemName: 'Certificate of Assessment - A7843',
+                itemName: 'Certificate of Assessment - Flutter - A7843',
                 verifyText: 'Verify Assessment',
                 onTapVerifyCertificate: () async {
                   await launchUrl(Uri.parse(
                       'https://ostad.app/share/certificate/a7843-mujahedul-islam'));
+                },
+              ),
+            ),
+            Expanded(
+              child: ItemCard(
+                itemImage:
+                    'https://raw.githubusercontent.com/muj-i/mocks/main/certificates/a27065-mujahedul-islam.png',
+                itemName: 'Certificate of Assessment - MERN - A27065',
+                verifyText: 'Verify Assessment',
+                onTapVerifyCertificate: () async {
+                  await launchUrl(Uri.parse(
+                      'https://ostad.app/share/certificate/a27065-mujahedul-islam'));
                 },
               ),
             ),
