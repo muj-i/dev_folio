@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "xyz.sheba.managerapp",
+      "sha256_cert_fingerprints": [
+        "9F:AE:A9:47:D4:87:47:2D:27:74:1A:AE:65:25:F8:53:2B:FE:EA:D5:D2:75:D6:C8:C0:28:6D:70:45:D3:67:90"
+      ]
+    }
+  }
+]
