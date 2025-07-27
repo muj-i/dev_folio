@@ -10,13 +10,13 @@ class Experience0 extends StatelessWidget {
   Widget build(BuildContext context) {
     return ExperiencePart(
       text1: 'Software Engineer I',
-      text2: 'Sheba Platform Limited,',
-      text3: 'Mohakhali DOHS, Dhaka, Bangladesh.',
+      text2: 'Sheba Fintech Limited,',
+      text3: 'Banani 11, Dhaka, Bangladesh.',
       text4: 'July 2024 - Present',
-      urlText: 'sheba-platform.xyz',
-      onTap: () async {
-        await launchUrl(Uri.parse('https://sheba-platform.xyz/'));
-      },
+      // urlText: 'sheba-platform.xyz',
+      // onTap: () async {
+      //   await launchUrl(Uri.parse('https://sheba-platform.xyz/'));
+      // },
       text5:
           '• Maintain and enhance the existing codebase, ensuring stability and performance in the production app.',
       text6:

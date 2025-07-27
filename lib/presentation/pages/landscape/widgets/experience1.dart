@@ -15,10 +15,10 @@ class Experience1 extends StatelessWidget {
       text2: 'Bringin Technologies Limited,',
       text3: 'Uttara, Dhaka, Bangladesh.',
       text4: 'June 2023 - July 2024',
-      urlText: 'getfit.com.bd',
-      onTap: () async {
-        await launchUrl(Uri.parse('https://getfit.com.bd/'));
-      },
+      // urlText: 'getfit.com.bd',
+      // onTap: () async {
+      //   await launchUrl(Uri.parse('https://getfit.com.bd/'));
+      // },
       text5:
           '• Designed and developed highly scalable features using GetX state management and REST APIs.',
       text6:

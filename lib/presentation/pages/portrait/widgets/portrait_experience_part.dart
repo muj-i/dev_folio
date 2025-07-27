@@ -14,8 +14,8 @@ class PortraitExperiencePart extends StatelessWidget {
       this.text7,
       this.text8,
       this.text9,
-      required this.urlText,
-      required this.onTap,
+      this.urlText,
+      this.onTap,
       this.widget1,
       this.widget2});
   final String text1;
@@ -27,8 +27,8 @@ class PortraitExperiencePart extends StatelessWidget {
   final String? text7;
   final String? text8;
   final String? text9;
-  final String urlText;
-  final Function() onTap;
+  final String? urlText;
+  final Function()? onTap;
   final Widget? widget1;
   final Widget? widget2;
 
@@ -98,17 +98,18 @@ class PortraitExperiencePart extends StatelessWidget {
               //         decorationColor: AppColors.blue),
               //   ),
               // ),
-              InkWell(
-                onTap: onTap,
-                child: Text(
-                  urlText,
-                  style: AppTheme.poppinsTextStyle.copyWith(
-                      fontSize: 18,
-                      color: AppColors.blue,
-                      decoration: TextDecoration.underline,
-                      decorationColor: AppColors.blue),
+              if (urlText != null && onTap != null)
+                InkWell(
+                  onTap: onTap,
+                  child: Text(
+                    urlText!,
+                    style: AppTheme.poppinsTextStyle.copyWith(
+                        fontSize: 18,
+                        color: AppColors.blue,
+                        decoration: TextDecoration.underline,
+                        decorationColor: AppColors.blue),
+                  ),
                 ),
-              ),
               if (text5 != null) const SizedBox(height: 20),
               if (text5 != null)
                 Text(

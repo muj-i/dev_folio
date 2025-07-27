@@ -14,8 +14,8 @@ class ExperiencePart extends StatelessWidget {
       this.text7,
       this.text8,
       this.text9,
-      required this.urlText,
-      required this.onTap,
+      this.urlText,
+      this.onTap,
       this.widget});
 
   final String text1;
@@ -27,8 +27,8 @@ class ExperiencePart extends StatelessWidget {
   final String? text7;
   final String? text8;
   final String? text9;
-  final String urlText;
-  final Function() onTap;
+  final String? urlText;
+  final Function()? onTap;
   final Widget? widget;
 
   @override
@@ -107,17 +107,19 @@ class ExperiencePart extends StatelessWidget {
                       //         decorationColor: AppColors.blue),
                       //   ),
                       // ),
-                      InkWell(
-                        onTap: onTap,
-                        child: Text(
-                          urlText,
-                          style: AppTheme.poppinsTextStyle.copyWith(
-                              fontSize: 18,
-                              color: AppColors.blue,
-                              decoration: TextDecoration.underline,
-                              decorationColor: AppColors.blue),
-                        ),
-                      ),
+                      urlText != null && onTap != null
+                          ? InkWell(
+                              onTap: onTap,
+                              child: Text(
+                                urlText!,
+                                style: AppTheme.poppinsTextStyle.copyWith(
+                                    fontSize: 18,
+                                    color: AppColors.blue,
+                                    decoration: TextDecoration.underline,
+                                    decorationColor: AppColors.blue),
+                              ),
+                            )
+                          : const SizedBox(),
                     ],
                   )
                 ],

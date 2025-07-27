@@ -3,7 +3,6 @@ import 'package:dev_folio/presentation/pages/portrait/widgets/seemore_shadow.dar
 import 'package:dev_folio/presentation/widgets/item_card.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class PortraitExperience2 extends StatelessWidget {
   const PortraitExperience2({
@@ -19,10 +18,10 @@ class PortraitExperience2 extends StatelessWidget {
       text2: 'Code Village,',
       text3: 'Dhaka - 1230, Bangladesh.',
       text4: 'May 2022 - June 2023',
-      urlText: 'codevillage.com.bd',
-      onTap: () async {
-        await launchUrl(Uri.parse('https://codevillage.com.bd/'));
-      },
+      // urlText: 'codevillage.com.bd',
+      // onTap: () async {
+      //   await launchUrl(Uri.parse('https://codevillage.com.bd/'));
+      // },
       text5:
           '• Developed highly scalable flutter application using Provider state management and REST APIs.',
       text6: '• Worked collaboratively within an agile development team.',
