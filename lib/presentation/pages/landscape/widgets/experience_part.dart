@@ -81,18 +81,27 @@ class ExperiencePart extends StatelessWidget {
                           color: AppColors.black,
                         ),
                       ),
-                    ],
-                  ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
+                      urlText == null && onTap == null ?
                       Text(
                         text4,
                         style: AppTheme.poppinsTextStyle.copyWith(
                           fontSize: 18,
                           color: AppColors.black,
                         ),
-                      ),
+                      ) : const SizedBox(),
+                    ],
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      urlText != null && onTap != null ?
+                      Text(
+                        text4,
+                        style: AppTheme.poppinsTextStyle.copyWith(
+                          fontSize: 18,
+                          color: AppColors.black,
+                        ),
+                      ) : const SizedBox(),
                       // InkWell(
                       //   onTap: () async {
                       //     await launchUrl(Uri.parse(
